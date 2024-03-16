@@ -1,56 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Aman Raj - Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #333;
-            color: #fff;
-        }
-        .strength-list {
-            list-style: square;
-            padding-left: 20px;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
 <body>
     <header>
         <h1>Aman Raj</h1>
