@@ -1,0 +1,102 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0; /* Light background for contrast */
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center; /* Center-align header text */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1, h2 {
+    margin: 0;
+    text-align: left; /* Center-align headings */
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto; /* Center-align image */
+}
+
+#about,#about h1{
+    text-align: center;
+}
+
+section {
+    padding: 2rem 0;
+    background: #fff; /* White background for sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.bio, .skills, .projects, .links {
+    margin-bottom: 1rem;
+}
+
+.bio, .skills, .projects {
+    padding: 2rem;
+    max-width: 800px; /* Maximum width for better readability */
+    margin: 1rem auto; /* Center-align sections */
+}
+
+.skills ul, .projects ul, .social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li, .projects li, .social-links li {
+    padding: 0.5rem 0;
+}
+
+a {
+    color: #333; /* Dark color for links */
+    text-decoration: underline; /* Underline links */
+}
+
+a:hover {
+    text-decoration: none; /* Remove underline on hover for cleaner look */
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Animation Example */
+.animate-bg {
+    animation: fadeBackground 0.7s ease-in-out;
+}
+
+@keyframes fadeBackground {
+    from {
+        background-color: yellow;
+    }
+    to {
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
