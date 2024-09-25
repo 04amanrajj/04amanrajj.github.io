@@ -117,6 +117,10 @@ footer p {
 .container h1 {
   text-align: center;
 }
+.project-list{
+  display: flex;
+  flex-direction: column-reverse;
+}
 
 @keyframes fadeBackground {
   from {
