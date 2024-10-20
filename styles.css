@@ -83,6 +83,7 @@ a {
   padding: 10px;
   color: #333;
   text-decoration: none;
+  transition: all 0.2s ease-in;
 }
 
 a:hover {
