@@ -1,119 +1,1488 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aman Raj - About Me</title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
+    <!--==================== FAVICON ====================-->
+    <link rel="icon" href="assets/img/about.png" />
 
-<body>
-  <header>
-    <div class="container">
-      <h1>Aman Raj</h1>
-    </div>
-  </header>
+    <!--==================== UNICONS ====================-->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
 
-  <section id="about">
-    <div class="container">
-      <img src="https://i.imgur.com/zp3ges0.jpeg" alt="Aman Raj" class="profile-pic" />
-      <h1>About Me</h1>
-      <p>
-        Hi, I'm Aman Raj, a 19-year-old BCA 1st-year student living in
-        Rajasthan, India. I'm passionate about technology, programming, and
-        creating innovative solutions.
-      </p>
-    </div>
-  </section>
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 
-  <section class="bio">
-    <div class="container">
-      <h2>Biography</h2>
-      <p>
-        I'm currently pursuing my Bachelor of Computer Applications (BCA) and
-        have a keen interest in programming, web development, and technology.
-        I enjoy learning new skills and applying them in real-world projects.
-        My journey in tech began with a curiosity about how things work, which
-        has led me to explore various programming languages and tools.
-      </p>
-    </div>
-  </section>
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
-  <section class="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul>
-        <li>Web Development (HTML, CSS, JavaScript)</li>
-        <li>Backend Development (Node.js, Express.js)</li>
-        <li>Database Management (MongoDB)</li>
-        <li>Linux/Ubuntu System</li>
-        <li>Version Control (Git)</li>
-        <li>Working with APIs (Postman)</li>
-        <li>Website Deployment (Netlify, Render)</li>
-      </ul>
-    </div>
-  </section>
+    <!----------------- github calender css ----------->
+    <link rel="stylesheet" href="./assets/css/github_states.css" />
+    <link rel="stylesheet" href="./assets/css/skill-section.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/cdgco/techfont@latest/dist/techFont.css"
+    />
 
-  <section class="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <ul class="project-list">
-        <li>
-          <a href="https://todo-lissttt-v1.netlify.app/" target="_blank">To-Do List Application</a>
-        </li>
-        <li>
-          <a href="https://shoes-dukan.netlify.app/" target="_blank">E-commerce Shoes shop</a>
-        </li>
-        <li>
-          <a href="https://vaccination-demo.netlify.app/" target="_blank">Vaccination Control</a>
-        </li>
-        <li>
-          <a href="https://fetchweatherinfo.netlify.app/" target="_blank">Real Time weather monitor</a>
-        </li>
-        <li>
-          <a href="https://meentra.netlify.app/" target="_blank">Myntra Clone</a>
-        </li>
-        <li>
-          <a href="https://swiggee.netlify.app/" target="_blank">Restaurent Orders Manager</a>
-        </li>
-        <li>
-          <a href="https://aqqle.netlify.app/" target="_blank">Apple Clone</a>
-        </li>
-        <li>
-          <a href="https://notepod.netlify.app/" target="_blank">Secure Note taking app</a>
-        </li>
-        <li>
-          <a href="https://satyanam.netlify.app//" target="_blank">Food Ordering Application</a>
-        </li>
-      </ul>
-    </div>
-  </section>
+    <title>Aman Raj</title>
+  </head>
 
-  <section class="links">
-    <div class="container">
-      <h2>Find Me Online</h2>
-      <ul class="social-links">
-        <li>
-          <a href="https://github.com/04amanrajj" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="social-icon" />
-            GitHub
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/04.aman.raj/" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="social-icon" />
-            Instagram
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
+  <body>
+    <!--==================== HEADER ====================-->
 
-  <footer>
-    <p>© 2024 Aman Raj. All Rights Reserved.</p>
-  </footer>
-</body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Aman Raj</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <li class="nav__item">
+              <a class="nav__link nav-link home" href="#home">
+                <i class="uil uil-estate nav__icon"></i>Home</a
+              >
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav-link about" href="#about ">
+                <i class="uil uil-user nav__icon"></i>About</a
+              >
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav-link skills" href="#skills">
+                <i class="uil uil-file-alt nav__icon"></i>Skills</a
+              >
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav-link projects" href="#projects">
+                <i class="uil uil-briefcase-alt nav__icon"></i>Projects</a
+              >
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav-link contact" href="#contact">
+                <i class="uil uil-link-alt nav__icon"></i>ContactMe</a
+              >
+            </li>
 
+            <li class="nav__item">
+              <a
+                id="resume-button"
+                download
+                class="nav__link nav-link resume"
+                target="_blank"
+                href="https://drive.google.com/file/d/1ulgsHynUamUKVP8vN-FigiztH0DsHL29/view?usp=sharing"
+              >
+                <i class="uil uil-file-blank nav__icon"></i>Resume
+              </a>
+            </li>
+          </ul>
+          <i class="uil uil-times nav__close nav__icon" id="nav-close"></i>
+        </div>
+        <div class="nav__btns">
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="uil uil-apps nav__icon"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__content grid">
+            <!-- socials -->
+            <div class="home__social">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/aman-raj-226875339/"
+                class="home__social-icon"
+              >
+                <i class="uil uil-linkedin-alt"></i>
+              </a>
+              <a
+                target="_blank"
+                href="https://github.com/04amanrajj"
+                class="home__social-icon"
+              >
+                <i class="uil uil-github-alt"></i>
+              </a>
+            </div>
+            <!-- profile image -->
+
+            <div class="home__img">
+              <img
+                src="./assets/img/tp.png"
+                class="home-img"
+                style="display: none"
+                alt=""
+              />
+              <svg
+                class="home__blob"
+                viewBox="0 0 200 187"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <mask id="mask0" mask-type="alpha">
+                  <path
+                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+                  />
+                </mask>
+                <g mask="url(#mask0)">
+                  <path
+                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+                  />
+
+                  <image class="home__blob-img" href="./assets/img/tp.png" />
+                </g>
+              </svg>
+            </div>
+            <!-- summary -->
+            <div class="home__data">
+              <h1 id="user-detail-name" class="home__title">
+                Hi, I'm Aman Raj
+              </h1>
+              <h3 class="home__subtitle">Software Engineer at Quantela</h3>
+              <p class="home__description">
+                As a Software Engineer, adept in Node.js, AWS, and JavaScript.
+                My background in Computer Applications fuels my passion for
+                migration projects, security enhancements, and mobile
+                microservice development. I thrive in collaborative
+                environments, revitalizing non-functional services, and driving
+                innovation for project success and team unity
+              </p>
+              <a href="#contact" class="button button--flex">
+                Contact Me
+                <i class="uil uil-comment-alt button__icon"></i>&nbsp&nbsp
+              </a>
+            </div>
+          </div>
+          <!-- div scrolll -->
+          <div class="home__scroll">
+            <a href="#about" class="home__scroll-button button--flex">
+              <!-- <i class="uil uil-direction home__scroll-arrow home__scroll-mouse"></i> -->
+              <span class="home__scroll-name">Scroll down</span>
+              <i class="uil uil-angle-down home__scroll-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="dukin-hrr" />
+
+      <!--==================== ABOUT ====================-->
+      <section class="about section" id="about">
+        <h2 class="section__title">About Me</h2>
+        <span class="section__subtitle"></span>
+
+        <div class="about__container container">
+          <img src="assets/img/about.png" alt="" class="about__img" />
+
+          <div class="about__data">
+            <p class="about__description" id="user-detail-intro">
+              I'm Aman Raj, currently pursuing a Bachelor's degree in Computer
+              Applications (BCA). <br />
+              My journey in the realm of technology has led me to specialize in
+              Full Stack Web Development, where I have built and deployed
+              several feature-rich projects, including responsive websites and
+              full-stack applications. <br /><br />
+              I have hands-on experience in backend development, having worked
+              extensively with Node.js, Express.js, MongoDB, and other modern
+              tools and frameworks. My skills include building APIs, managing
+              databases, deploying scalable applications, and ensuring secure
+              authentication using JWT. <br />
+              Additionally, I have explored advanced concepts such as Knex,
+              Kafka, Fastify, and Elastic, and I thrive on managing projects
+              involving system design and microservices. <br />
+              My professional endeavors include leading initiatives in dynamic
+              feature development like generating custom PDFs, Excel, and CSV
+              files, as well as automating scheduling processes for efficiency.
+              <br />
+            </p>
+
+            <div class="about__info">
+              <div>
+                <span class="about__info-title">1200+</span>
+                <span class="about__info-name"
+                  >Hours of <br />
+                  Coding</span
+                >
+              </div>
+
+              <div>
+                <span class="about__info-title">700+</span>
+                <span class="about__info-name"
+                  >DSA <br />
+                  Problems
+                </span>
+              </div>
+              <div>
+                <span class="about__info-title">10+</span>
+                <span class="about__info-name"
+                  >Completed <br />
+                  Project</span
+                >
+              </div>
+            </div>
+
+            <!-- button -> a ->  -->
+            <div class="about__buttons">
+              <a
+                id="resume-button"
+                download=""
+                href="https://drive.google.com/file/d/1ulgsHynUamUKVP8vN-FigiztH0DsHL29/view?usp=sharing"
+                target="_blank"
+                class="button button--flex"
+              >
+                Download CV<i class="uil uil-cloud-download button__icon"></i
+                >&nbsp&nbsp
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="dukin-hrr" />
+
+      <!--==================== QUALIFICATION ====================-->
+      <section class="qualification section" id="qualifications">
+        <h2 class="section__title">My personal journey</h2>
+        <!-- <span class="section__subtitle">My personal journey</span> -->
+
+        <div class="qualification__container container">
+          <!-- tabs -->
+          <div class="qualification__tabs">
+            <div
+              class="qualification__button button--flex qualification__active"
+              data-target="#work"
+            >
+              <i class="uil uil-laptop qualification__icon"></i>
+              Journey
+            </div>
+
+            <div
+              class="qualification__button button--flex"
+              data-target="#education"
+            >
+              <i class="uil uil-graduation-cap qualification__icon"></i>
+              Grauation
+            </div>
+          </div>
+
+          <div class="qualification__sections">
+            <!--==================== QUALIFICATION WORK  CONTENT 1 ====================-->
+
+            <!--==================== QUALIFICATION  EDUCATION 2 ====================-->
+            <div
+              class="qualification__content qualification__active"
+              data-content
+              id="education"
+            >
+              <!--==================== QUALIFICATION 0 ====================-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">
+                    Full Stack Web Development
+                  </h3>
+                  <span class="qualification__subtitle">Self,</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    JUN 2024 - JAN 2025
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+
+              <!--==================== QUALIFICATION 1 ====================-->
+              <div class="qualification__data">
+                <!-- empty for left -->
+                <div></div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+                <div>
+                  <h3 class="qualification__title">
+                    Bachelor of computer Application
+                  </h3>
+                  <span class="qualification__subtitle"
+                    >Mohanlal Sukhadia University</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    2023 - 2026
+                  </div>
+                </div>
+              </div>
+
+              <!--==================== QUALIFICATION 2 ====================-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">Senior Secondary</h3>
+                  <span class="qualification__subtitle"
+                    >Govardhan senior secondary school, Nathdwara</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    2021 - 2023
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+
+              <!--==================== QUALIFICATION 3 ====================-->
+              <div class="qualification__data">
+                <!-- empty div for left -->
+                <div></div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+
+                <div>
+                  <h3 class="qualification__title">Secondary</h3>
+                  <span class="qualification__subtitle"
+                    >Senior secondary school, Nathdwara</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    2018 - 2021
+                  </div>
+                </div>
+                <div></div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <!-- <span class="qualification__line"></span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== PORTFOLIO ====================-->
+      <!-- id="portfolio" -->
+      <hr class="dukin-hrr" />
+
+      <section class="portfolio section" id="projects">
+        <h2 class="section__title">Projects</h2>
+        <!-- <span class="section__subtitle"><a href="#">Click here</a> to see all.</span> -->
+
+        <!-- proooooooooooooooject -->
+
+        <div class="portfolio__container container swiper-container">
+          <div class="swiper-wrapper">
+            <!--==================== slide 1 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/230887457-e7d94561-9b0e-4a47-9a83-cae79ae561b1.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+              </figure>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title project-title">Snips & Spikes</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  A Hair Salon booking appointment application where a user can
+                  signup and book an appointment for the services. <br />
+                </p>
+                <br /><br />
+                <a
+                  href="https://github.com/04amanrajj/Snips-Spikes-Hair-Salon-booking-website"
+                  target="_blank"
+                  class="project-github-link button button--flex button--small portfolio__button"
+                >
+                  &nbsp GitHub
+                  <i class="uil uil-github-alt button__icon"></i>&nbsp
+                </a>
+                <a
+                  href="https://snipsandspikes.netlify.app/"
+                  target="_blank"
+                  class="button button--flex project-deployed-link button--small portfolio__button"
+                >
+                  &nbsp&nbsp &nbsp&nbsp&nbspLive &nbsp&nbsp
+                  <i class="uil uil-external-link-alt button__icon"></i>&nbsp
+                </a>
+              </div>
+            </div>
+            <!--==================== slide 2 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/230887473-4ad81427-a907-408a-a6ba-53846b06e6ba.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+              </figure>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title project-title">Tech Stack</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  Bootstrap | HTML | CSS | JavaScript | SweeperJS <br />
+                  NodeJS | ExpressJS | Mongodb | rest-api | bcrypt | Nodemailer
+                </p>
+                <h3 class="portfolio__title project-title">Team</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  This was an collaborative project done within The Time span of
+                  5 days
+                </p>
+              </div>
+            </div>
+            <!--==================== slide 3 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/230887479-1c74c055-4256-4abf-a12f-f2e04b765c25.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+              </figure>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title project-title">Features</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  <i class="uil uil-angle-double-right"></i> Admin, User, Login,
+                  Signup, Products, Book Appointment, View Appointment. <br />
+                  <i class="uil uil-angle-double-right"></i> Users can sign up
+                  log in and view Services and Book Appointments. <br />
+                  <i class="uil uil-angle-double-right"></i> View the
+                  Appointment and cancel it. <br />
+                  <i class="uil uil-angle-double-right"></i> Admin panel and
+                  CRUD operation on services, employees, and users. <br />
+                </p>
+              </div>
+            </div>
+            <!--==================== slide 4 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/230887490-b548760e-f5d9-4a1b-838a-f30f595b6928.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+                <p class="portfolio__title project-title">Book Appointment</p>
+                <p />
+              </figure>
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/230896989-737da941-7023-4439-bf72-58f065c09a5e.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+                <p class="portfolio__title project-title">View Appointment</p>
+                <p />
+              </figure>
+            </div>
+          </div>
+
+          <!-- Add Arrows -->
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          </div>
+
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <hr class="dukin-hr" />
+
+        <!-- proooooooooooooooject -->
+
+        <div class="portfolio__container container swiper-container">
+          <div class="swiper-wrapper">
+            <!--==================== slide 1 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <div class="portfolio__data">
+                <h3 class="portfolio__title project-title">WorkDesk</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  WorkDesk is a clone of Zoom, which is a Video Meeting, Screen
+                  sharing, and Messaging application.<br />
+                </p>
+                <br /><br />
+                <a
+                  href="https://github.com/04amanrajj/WorkDesk-clone"
+                  target="_blank"
+                  class="project-github-link button button--flex button--small portfolio__button"
+                >
+                  &nbsp GitHub
+                  <i class="uil uil-github-alt button__icon"></i>&nbsp
+                </a>
+                <a
+                  href="https://workdesk.netlify.app/"
+                  target="_blank"
+                  class="button button--flex project-deployed-link button--small portfolio__button"
+                >
+                  &nbsp&nbsp &nbsp&nbsp&nbspLive &nbsp&nbsp
+                  <i class="uil uil-external-link-alt button__icon"></i>&nbsp
+                </a>
+              </div>
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/230957371-70c47d1a-fe86-4431-ba83-6f73acc68c42.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+              </figure>
+            </div>
+            <!--==================== slide 2 ====================-->
+
+            <div class="portfolio__content grid swiper-slide project-card">
+              <div class="portfolio__data">
+                <h3 class="portfolio__title project-title">Tech Stack</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  HTML | CSS | Javascript | Bootsrap <br />
+                  NodeJS | ExpressJS | Mongodb | rest-api | bcrypt | Nodemailer
+                  <br />
+                  WebRTC | PeerJS library | Socket.io
+                </p>
+                <h3 class="portfolio__title project-title">Team</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  This was an collaborative project done within The Time span of
+                  5 days
+                </p>
+              </div>
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/230957688-bc009463-c988-4e93-b035-a0f172504957.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+              </figure>
+            </div>
+
+            <!--==================== slide 3 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <div class="portfolio__data">
+                <h3 class="portfolio__title project-title">Features</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  <i class="uil uil-angle-double-right"></i> Login signup and
+                  Login with Google and GitHub Accounts. <br />
+                  <i class="uil uil-angle-double-right"></i> Real-time video
+                  chat.<br />
+                  <i class="uil uil-angle-double-right"></i>
+                  Screen-Sharing.<br />
+                  <i class="uil uil-angle-double-right"></i> Messaging feature.
+                  <br />
+                </p>
+              </div>
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/230957726-4e853b3c-7799-4703-b327-f75e20bc092c.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+              </figure>
+            </div>
+            <!--==================== slide 4 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/221489051-e6a06137-e7a4-42a7-9e5f-000eb14d6358.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+                <p class="portfolio__title project-title">Video Chat feature</p>
+                <p />
+              </figure>
+
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/221489062-46235239-d888-4ca6-89fe-d5a8e4e05a48.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+                <p class="portfolio__title project-title">Chat feature</p>
+                <p />
+              </figure>
+            </div>
+          </div>
+
+          <!-- Add Arrows -->
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          </div>
+
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <hr class="dukin-hr" />
+
+        <!-- proooooooooooooooject -->
+
+        <div class="portfolio__container container swiper-container">
+          <div class="swiper-wrapper">
+            <!--==================== slide 1 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/214338799-dd8045ec-3cd5-4aec-82f7-f362396d0440.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+              </figure>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title project-title">FireWheel</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  FireWheel is a clone of Firestone that sells Tires, and
+                  automobile parts and provides services. <br />
+                </p>
+                <br /><br />
+                <a
+                  href="https://github.com/04amanrajj/Firestone-clone"
+                  target="_blank"
+                  class="project-github-link button button--flex button--small portfolio__button"
+                >
+                  &nbsp GitHub
+                  <i class="uil uil-github-alt button__icon"></i>&nbsp
+                </a>
+                <a
+                  href="https://firewheeeeeel.netlify.app/"
+                  target="_blank"
+                  class="button button--flex project-deployed-link button--small portfolio__button"
+                >
+                  &nbsp&nbsp &nbsp&nbsp&nbspLive &nbsp&nbsp
+                  <i class="uil uil-external-link-alt button__icon"></i>&nbsp
+                </a>
+              </div>
+            </div>
+            <!--==================== slide 2 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/214338931-6b798c48-3aa0-4aa0-abdd-abfd248cf66c.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+              </figure>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title project-title">Tech Stack</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  Bootstrap | HTML | CSS | JavaScript | Boostrap <br />
+                  NodeJS | ExpressJS | Mongodb | rest-api | bcrypt
+                </p>
+                <h3 class="portfolio__title project-title">Team</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  This was an individual project done within The Time span of 5
+                  days
+                </p>
+              </div>
+            </div>
+            <!--==================== slide 3 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/214338964-83115554-4984-44b1-906e-7b5a4c636ab0.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+              </figure>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title project-title">Features</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  <i class="uil uil-angle-double-right"></i>Admin, User, Login,
+                  Signup, Products Pages <br />
+                  <i class="uil uil-angle-double-right"></i>Users can sign up
+                  log in and view products and get quotations. <br />
+                  <i class="uil uil-angle-double-right"></i>Admin panel and CRUD
+                  operation on services, employees, and users. <br />
+                  <i class="uil uil-angle-double-right"></i>Created Backend and
+                  required APIs <br />
+                  <i class="uil uil-angle-double-right"></i>Backend developed on
+                  cylic.sh and frontend on netlify<br />
+                </p>
+              </div>
+            </div>
+            <!--==================== slide 4 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/214338884-5aab6b8c-41a3-46a0-836a-adf90f0382ae.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+                <p class="portfolio__title project-title">Footer</p>
+                <p />
+              </figure>
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/214338990-0a4b3466-98ff-4309-b0ac-aa7fa3467f67.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+                <p class="portfolio__title project-title">Admin panel</p>
+                <p />
+              </figure>
+            </div>
+          </div>
+
+          <!-- Add Arrows -->
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          </div>
+
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <hr class="dukin-hr" />
+
+        <!-- prooooooooooooooojeFct -->
+
+        <div class="portfolio__container container swiper-container">
+          <div class="swiper-wrapper">
+            <!--==================== slide 1 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <div class="portfolio__data">
+                <h3 class="portfolio__title project-title">SkinCure</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  SkinCure is online cosmetic products selling site.<br />
+                  It sells beauty, wellness and fashion products across
+                  websites, it became the first Indian unicorn startup headed by
+                  a woman. <br />
+                </p>
+                <br /><br />
+                <a
+                  href="https://github.com/04amanrajj/SkinCure.com"
+                  target="_blank"
+                  class="project-github-link button button--flex button--small portfolio__button"
+                >
+                  &nbsp GitHub
+                  <i class="uil uil-github-alt button__icon"></i>&nbsp
+                </a>
+                <a
+                  href="https://skincure.netlify.app/"
+                  target="_blank"
+                  class="button button--flex project-deployed-link button--small portfolio__button"
+                >
+                  &nbsp&nbsp &nbsp&nbsp&nbspLive &nbsp&nbsp
+                  <i class="uil uil-external-link-alt button__icon"></i>&nbsp
+                </a>
+              </div>
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/208608709-2b7d7b95-3336-4638-9ab4-0d2505d10a63.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+              </figure>
+            </div>
+            <!--==================== slide 2 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <div class="portfolio__data">
+                <h3 class="portfolio__title project-title">Features</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  <i class="uil uil-angle-double-right"></i> Home page <br />
+                  <i class="uil uil-angle-double-right"></i> products page
+                  <br />
+                  <i class="uil uil-angle-double-right"></i> Login page <br />
+                  <i class="uil uil-angle-double-right"></i> Single product page
+                  <br />
+                  <i class="uil uil-angle-double-right"></i> Paytment page
+                  <br />
+                  <i class="uil uil-angle-double-right"></i> Signup page <br />
+                  <i class="uil uil-angle-double-right"></i> Admin panel <br />
+                </p>
+              </div>
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/208608919-9a60d92a-b12c-4a87-bf62-b0eb9ea948bf.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+              </figure>
+            </div>
+            <!--==================== slide 3 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <div class="portfolio__data">
+                <h3 class="portfolio__title project-title">Tech Stack</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  HTML | CSS | Javascript | Bootsrap <br />
+                  Mock server | rest-api
+                </p>
+              </div>
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/208608961-301ae2f9-856d-482c-ab12-495feac3ea1a.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+              </figure>
+            </div>
+            <!--==================== slide 4 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/208609069-a4979536-9f5c-4fe4-88b4-f440523aec08.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+                <p class="portfolio__title project-title">
+                  Product's description page
+                </p>
+                <p />
+              </figure>
+
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/208609222-0ffe21f1-2fba-43f8-b7a9-a7975cc996c2.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+                <p class="portfolio__title project-title">Paytment Page</p>
+                <p />
+              </figure>
+            </div>
+          </div>
+
+          <!-- Add Arrows -->
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          </div>
+
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <hr class="dukin-hr" />
+
+        <!-- proooooooooooooooject -->
+
+        <div class="portfolio__container container swiper-container">
+          <div class="swiper-wrapper">
+            <!--==================== slide 1 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/203859011-d9011312-61b1-4925-8ffb-c1a185b626d9.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+              </figure>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title project-title">BillBee</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  Billbee is a clone of Chargebee and it’s an online billing
+                  software service. <br />
+                  which is the recurring revenue management platform for global
+                  scale.<br />
+                </p>
+                <br /><br />
+                <a
+                  href="https://github.com/04amanrajj/ChargeBee-clone"
+                  target="_blank"
+                  class="project-github-link button button--flex button--small portfolio__button"
+                >
+                  &nbsp GitHub
+                  <i class="uil uil-github-alt button__icon"></i>&nbsp
+                </a>
+                <a
+                  href="https://billbeee.netlify.app/"
+                  target="_blank"
+                  class="button button--flex project-deployed-link button--small portfolio__button"
+                >
+                  &nbsp&nbsp &nbsp&nbsp&nbspLive &nbsp&nbsp
+                  <i class="uil uil-external-link-alt button__icon"></i>&nbsp
+                </a>
+              </div>
+            </div>
+            <!--==================== slide 2 ====================-->
+            <div class="portfolio__content grid swiper-slide project-card">
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/203859019-b9cd57f9-7a94-4e88-9c2b-78e53430ea88.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+              </figure>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title project-title">Tech Stack</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  Bootstrap | HTML | CSS | JavaScript | Boostrap <br />
+                </p>
+                <h3 class="portfolio__title project-title">Team</h3>
+                <p
+                  class="portfolio__description project-tech-stack project-description"
+                >
+                  <i class="uil uil-angle-double-right"></i> This was an
+                  individual project done within The Time span of 5 days <br />
+                  <i class="uil uil-angle-double-right"></i> Impilimented
+                  Homepage , Login , signup page , Customers page. <br />
+                  <i class="uil uil-angle-double-right"></i> Used Local storage
+                  for login and signup pages. <br />
+                </p>
+              </div>
+            </div>
+            <!--==================== slide 3 ====================-->
+
+            <div class="portfolio__content grid swiper-slide project-card">
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/203859025-e47a88be-5545-47a3-8292-611faa2efefd.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+                <p class="portfolio__title project-title">Login page</p>
+                <p />
+              </figure>
+              <figure class="portfolio__figure">
+                <img
+                  src="https://user-images.githubusercontent.com/87657007/203859029-19379084-5ae5-43c4-bffa-089505a97ac9.png"
+                  alt=""
+                  class="skills-card-img portfolio__img"
+                />
+                <p class="portfolio__title project-title">Footer</p>
+                <p />
+              </figure>
+            </div>
+          </div>
+
+          <!-- Add Arrows -->
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          </div>
+
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <hr style="margin-top: 10%" class="dukin-hrr" />
+      </section>
+
+      <!-- ==================== SKILLS ====================== -->
+      <section class="skills section skills__open" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <!-- <span class="section__subtitle">My intrests</span> -->
+
+        <div class="skills__container container">
+          <div>
+            <!-- frontend  development -->
+
+            <div class="skills__content skills__close">
+              <div class="skills__header">
+                <i class="uil uil-brackets-curly skills__icon"></i>
+
+                <div>
+                  <h1 class="skills__title">Frontend Development</h1>
+                  <!-- <span class="skills__subtitle">More than 1 years</span> -->
+                </div>
+
+                <i class="uil uil-angle-down skills__arrow"></i>
+              </div>
+
+              <div class="skills__list grid">
+                <div class="fs_container">
+                  <div class="skills-card">
+                    <div class="skills-card-img" style="display: none"></div>
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                      class="skills-card-img"
+                      alt="html5"
+                    />
+                    <span class="skills-card-name">HTML5</span>
+                  </div>
+                  <div class="skills-card">
+                    <div class="skills-card-img" style="display: none"></div>
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                      class="skills-card-img"
+                      alt="css3"
+                    />
+                    <span class="skills-card-name">CSS3</span>
+                  </div>
+                  <div class="skills-card">
+                    <div class="skills-card-img" style="display: none"></div>
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                      class="skills-card-img"
+                      alt="JavaScript"
+                    />
+                    <span class="skills-card-name">JavaScript</span>
+                  </div>
+                  <div class="skills-card">
+                    <div class="skills-card-img" style="display: none"></div>
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                      class="skills-card-img"
+                      alt="express"
+                    />
+                    <span class="skills-card-name">Express.js</span>
+                  </div>
+                  <div class="skills-card">
+                    <div class="skills-card-img" style="display: none"></div>
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                      class="skills-card-img"
+                      alt="nodejs"
+                    />
+                    <span class="skills-card-name">Node.js</span>
+                  </div>
+                  <div class="skills-card">
+                    <div class="skills-card-img" style="display: none"></div>
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                      class="skills-card-img"
+                      alt="mongodb"
+                    />
+                    <span class="skills-card-name">MongoDB</span>
+                  </div>
+                  <div class="skills-card">
+                    <div class="skills-card-img" style="display: none"></div>
+                    <img
+                      src="./assets/img/icon/sql.png"
+                      class="skills-card-img"
+                      alt="sql"
+                    />
+                    <span class="skills-card-name">SQL</span>
+                  </div>
+                  <div class="skills-card">
+                    <div class="skills-card-img" style="display: none"></div>
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                      class="skills-card-img"
+                      alt="react"
+                    />
+                    <span class="skills-card-name">React</span>
+                  </div>
+                  <div class="skills-card">
+                    <div class="skills-card-img" style="display: none"></div>
+                    <img
+                      src="./assets/img/icon/aws.png"
+                      class="skills-card-img"
+                      alt="JavaScript"
+                    />
+                    <span class="skills-card-name">AWS</span>
+                  </div>
+                  <div class="skills-card">
+                    <div class="skills-card-img" style="display: none"></div>
+                    <img
+                      src="./assets/img/icon/yml.png"
+                      class="skills-card-img"
+                      alt="JavaScript"
+                    />
+                    <span class="skills-card-name">YML</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Backend -->
+          <div class="skills__content skills__close">
+            <div class="skills__header">
+              <!-- <i class="uil uil-brackets-curly skills__icon"></i> -->
+              <i class="uil uil-cloud-database-tree skills__icon"></i>
+
+              <div>
+                <h1 class="skills__title">Backend Development</h1>
+                <!-- <span class="skills__subtitle">More than 4 years</span> -->
+              </div>
+
+              <i class="uil uil-angle-down skills__arrow"></i>
+            </div>
+
+            <div class="skills__list grid">
+              <div class="bs_container">
+                <div class="skills-card">
+                  <div class="skills-card-img" style="display: none"></div>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                    class="skills-card-img"
+                    alt="vscode"
+                  />
+                  <span class="skills-card-name">VS Code</span>
+                </div>
+                <div class="skills-card">
+                  <div class="skills-card-img" style="display: none"></div>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
+                    class="skills-card-img"
+                    alt="materialui"
+                  />
+                  <span class="skills-card-name">Material UI</span>
+                </div>
+                <div class="skills-card">
+                  <div class="skills-card-img" style="display: none"></div>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                    class="skills-card-img"
+                    alt="bootstrap"
+                  />
+                  <span class="skills-card-name">Bootstrap</span>
+                </div>
+                <div class="skills-card">
+                  <div class="skills-card-img" style="display: none"></div>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                    class="skills-card-img"
+                    alt="git"
+                  />
+                  <span class="skills-card-name">Git</span>
+                </div>
+                <div class="skills-card">
+                  <div class="skills-card-img" style="display: none"></div>
+                  <img
+                    src="https://www.svgrepo.com/show/217753/github.svg"
+                    class="skills-card-img"
+                    alt="github"
+                  />
+                  <span class="skills-card-name">Github</span>
+                </div>
+                <div class="skills-card">
+                  <div class="skills-card-img" style="display: none"></div>
+                  <img
+                    src="https://cdn.icon-icons.com/icons2/2415/PNG/512/npm_original_wordmark_logo_icon_146402.png"
+                    class="skills-card-img"
+                    alt="github"
+                  />
+                  <span class="skills-card-name">NPM</span>
+                </div>
+                <div class="skills-card">
+                  <div class="skills-card-img" style="display: none"></div>
+                  <img
+                    src="./assets/img/icon/draw-io.svg"
+                    class="skills-card-img"
+                    alt="github"
+                  />
+                  <span class="skills-card-name">Draw.io</span>
+                </div>
+                <div class="skills-card">
+                  <div class="skills-card-img" style="display: none"></div>
+                  <img src="./assets/img/icon/netlify.png" />
+                  <span class="skills-card-name">Netlify</span>
+                </div>
+                <div class="skills-card">
+                  <div class="skills-card-img" style="display: none"></div>
+                  <img src="./assets/img/icon/heroku.png" />
+                  <span class="skills-card-name">Heroku</span>
+                </div>
+                <div class="skills-card">
+                  <div class="skills-card-img" style="display: none"></div>
+                  <img src="./assets/img/icon/canva.png" />
+                  <span class="skills-card-name">Canva</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="dukin-hrr" />
+
+      <!--==================== GITHUB STATES ====================-->
+
+<!-- 
+      <section
+        class="about section container react-activity-calendar"
+        id="github"
+      >
+        <h2 class="section__title">Github contributions in the last year</h2>
+        <div class="Github-calendar">
+          04amanrajj.
+        </div>
+      </section> -->
+
+      <!--==================== Github actitvities ====================-->
+
+      <section class="portfolio section githubstates" id="githubstates">
+        <h2 class="section__title">GitHub Activities</h2>
+
+        <div class="portfolio__container container swiper-container">
+          <div class="swiper-wrapper github-images">
+            <img
+              id="github-streak-stats"
+              class="portfolio__content grid swiper-slide"
+              src="https://github-readme-streak-stats.herokuapp.com?user=04amanrajj&theme=github-dark&hide_border=true&date_format=j%20M%5B%20Y%5D"
+            />
+
+            <img
+              id="github-top-langs"
+              class="portfolio__content grid swiper-slide"
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=04amanrajj&show_icons=true&locale=en&layout=compact&theme=github_dark&hide_border=true"
+              alt="ovi"
+            />
+
+            <img
+              id="github-stats-card"
+              class="portfolio__content grid swiper-slide"
+              src="https://github-readme-stats.vercel.app/api?username=04amanrajj&show_icons=true&locale=en&theme=github_dark&hide_border=true"
+              alt="ovi"
+            />
+
+            <img
+              class="portfolio__content grid swiper-slide"
+              src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=04amanrajj&theme=github_dark"
+            />
+          </div>
+
+          <!-- Add Arrows -->
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          </div>
+
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <hr class="dukin-hrr" />
+
+      <!--==================== CONTACT ME ====================-->
+      <section class="contact section" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <!-- <span class="section__subtitle">Get in touch</span> -->
+        <a style="display: none" target="_blank" id="contact-email">
+          <p><i class="fa fa-envelope"></i> 04.aman.raj@gmail.com</p>
+        </a>
+
+        <div class="contact__container container grid">
+          <div>
+            <div class="contact__information">
+              <a href="https://github.com/04amanrajj" target="_blank"
+                ><i class="uil uil-github contact__icon"></i
+              ></a>
+              <div>
+                <h3 class="contact__title">GitHub</h3>
+                <a
+                  id="contact-github"
+                  href="https://github.com/04amanrajj"
+                  target="_blank"
+                  ><span class="contact__subtitle">04amanrajj</span></a
+                >
+              </div>
+            </div>
+
+            <div class="contact__information">
+              <a
+                id="contact-linkedin"
+                href="https://www.linkedin.com/in/aman-raj-226875339/"
+                target="_blank"
+                ><i class="uil uil-linkedin contact__icon"></i
+              ></a>
+              <div>
+                <h3 class="contact__title">LinkedIn</h3>
+                <a
+                  href="https://www.linkedin.com/in/aman-raj-226875339/"
+                  target="_blank"
+                  ><span class="contact__subtitle"
+                    >www.linkedin.com/in/aman-raj</span
+                  ></a
+                >
+              </div>
+            </div>
+
+            <div class="contact__information">
+              <a id="contact-email" href="mailto:04.aman.raj@gmail.com"
+                ><i class="uil uil-envelope-alt contact__icon"></i
+              ></a>
+              <div>
+                <h3 class="contact__title">Email</h3>
+                <a href="mailto:04.aman.raj@gmail.com"
+                  ><span class="contact__subtitle"
+                    >04.aman.raj@gmail.com</span
+                  ></a
+                >
+              </div>
+            </div>
+            <div class="contact__information">
+              <a
+                href="https://www.instagram.com/04.aman.raj"
+                target="_blank"
+              >
+                <i class="uil uil-instagram contact__icon"></i
+              ></a>
+
+              <div>
+                <h3 id="contact-phone" class="contact__title">Instagram</h3>
+                <a
+                  href="https://www.instagram.com/04.aman.raj"
+                  target="_blank"
+                  ><span class="contact__subtitle">@04.aman.raj</span></a
+                >
+              </div>
+            </div>
+            <div class="contact__information">
+              <i class="uil uil-map-marker contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Location</h3>
+                <span class="contact__subtitle">Udaipur, Rajasthan</span>
+              </div>
+            </div>
+          </div>
+
+          <form action="" class="contact__form grid">
+            <div class="contact__inputs grid">
+              <div class="contact__content">
+                <label for="" class="contact__label">Name</label>
+                <input type="text" class="contact__input" />
+              </div>
+
+              <div class="contact__content">
+                <label for="" class="contact__label">Email</label>
+                <input type="email" class="contact__input" />
+              </div>
+            </div>
+            <div class="contact__content">
+              <label for="" class="contact__label">Project</label>
+              <input type="text" class="contact__input" />
+            </div>
+            <div class="contact__content">
+              <label for="" class="contact__label">Message</label>
+              <textarea
+                name=""
+                id=""
+                cols="0"
+                rows="7"
+                class="contact__input"
+              ></textarea>
+            </div>
+
+            <div>
+              <a
+                href="mailto:04.aman.raj@gmail.com"
+                class="button button--flex"
+              >
+                Send Message
+                <i class="uil uil-comment-alt button__icon"></i>&nbsp&nbsp
+              </a>
+            </div>
+          </form>
+        </div>
+      </section>
+      <hr class="dukin-hrr" />
+    </main>
+
+    <!--  -->
+
+    <!--  -->
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="footer__bg">
+        <div class="footer__container container grid">
+          <div>
+            <span class="footer__title">Aman Raj</span> <br />
+            <span class="footer__subtitle">Full Stack Web Developer</span>
+          </div>
+
+          <ul class="footer__links">
+            <li>
+              <a href="#home" class="footer__link">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="footer__link">About</a>
+            </li>
+            <li>
+              <a href="#portfolio" class="footer__link">Portfolio</a>
+            </li>
+          </ul>
+
+          <div class="footer__socials">
+            <a
+              href="https://www.linkedin.com/in/aman-raj-226875339/"
+              target="_blank"
+              class="footer__social"
+            >
+              <i class="uil uil-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/04amanrajj "
+              target="_blank"
+              class="footer__social"
+            >
+              <i class="uil uil-github"></i>
+            </a>
+          </div>
+        </div>
+        <p class="footer__copy">
+          Made with <span style="color: #e25555">&hearts;</span> by Aman Raj
+          <br />
+          &#169; Inspired By
+          <a
+            href="https://github.com/bedimcode/responsive-portfolio-website-Alexa"
+            style="text-decoration: none; color: rgb(255, 255, 255)"
+            target="_blank"
+            ><b>Bedimcode</b></a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+  </body>
 </html>
+
+<!--==================== GITHUB STATES LIBRARY ====================-->
+<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+<script>
+  GitHubCalendar(".Github-calendar", "04amanrajj", { responsive: true });
+</script>
+
+<!--==================== SWIPER JS ====================-->
+<script src="assets/js/swiper-bundle.min.js"></script>
+
+<!--==================== MAIN JS ====================-->
+<script src="assets/js/main.js"></script>
