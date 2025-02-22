@@ -121,6 +121,7 @@ body {
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1,
@@ -186,7 +187,7 @@ img {
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
-
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /*==================== NAV ====================*/
