@@ -212,10 +212,3 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
-
-
-// resume btns fucntion
-
-document.getElementById("resume-button").onclick = () => {
-    window.open("https://drive.google.com/file/d/1DESVAXAWbJCasoYDBDV7GBozl_S76nFd/view?usp=sharing");
-}
