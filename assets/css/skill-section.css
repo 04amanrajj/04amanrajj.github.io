@@ -1,4 +1,3 @@
-
 /*! -------------|Skills section|----------- */
 #skills {
     /* margin-bottom: 100vh; */
@@ -9,27 +8,23 @@
 
 #skills>.section_title::after {
     width: 50%;
-    flex: 0.48
+    flex: 0.48;
 }
 
 .frontend-skills {
     width: 100%;
 }
 
-.frontend-skills>h1, .backend-skills>h1 {
+.frontend-skills>h1,
+.backend-skills>h1 {
     font-size: var(--large-font);
     color: var(--grey-dark);
     margin-bottom: 1.5rem;
 }
 
-.fs_container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
-    margin: 40px 0;
-}
-
-.bs_container {
+.fs_container,
+.bs_container,
+.tools_container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
