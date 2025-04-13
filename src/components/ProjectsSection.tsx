@@ -101,6 +101,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 export const ProjectsSection: React.FC = () => {
   const projects = [
     {
+      title: "Satyanam Food React",
+      description: "Developed a full-stack food ordering application with features like user authentication, menu browsing with filters, cart functionality, and secure order processing. Implemented responsive design for all devices.",
+      images: [
+        "https://i.imgur.com/1mIGG01.png",
+        "https://i.imgur.com/WvCglqD.png",
+        "https://i.imgur.com/WvCglqD.png",
+        "https://i.imgur.com/mfoIjE3.png",
+        "https://i.imgur.com/tBzOfO1.png"
+      ],
+      demoLink: "https://satyanam-food.vercel.app/",
+      githubLink: "https://github.com/04amanrajj/satyanam-food-react",
+      technologies: ["React", "Node.js", "Express.js", "MongoDB", "Rest API", "material UI","tailwind CSS"],
+      icon: <Monitor className="h-5 w-5 text-gray-800" />
+    },
+    {
       title: "Satyanam Food",
       description: "Developed a full-stack food ordering application with features like user authentication, menu browsing with filters, cart functionality, and secure order processing. Implemented responsive design for all devices.",
       images: [
@@ -113,7 +128,7 @@ export const ProjectsSection: React.FC = () => {
       ],
       demoLink: "https://satyanam.netlify.app/",
       githubLink: "https://github.com/04amanrajj/Satyanaam-Food",
-      technologies: ["Node.js", "Express.js", "MongoDB", "React"],
+      technologies: ["Node.js", "Express.js", "MongoDB", "Rest API", "Bootstrap"],
       icon: <Monitor className="h-5 w-5 text-gray-800" />
     },
     {
@@ -128,7 +143,7 @@ export const ProjectsSection: React.FC = () => {
       ],
       demoLink: "https://aqqle.netlify.app/",
       githubLink: "https://github.com/04amanrajj/apple-clone",
-      technologies: ["React", "Tailwind CSS", "JavaScript", "Framer Motion"],
+      technologies: ["JavaScript", "JSON Server", "HTML", "CSS"],
       icon: <ShoppingBag className="h-5 w-5 text-gray-800" />
     },
     {
@@ -144,7 +159,7 @@ export const ProjectsSection: React.FC = () => {
       ],
       demoLink: "https://meentra.netlify.app/",
       githubLink: "https://github.com/04amanrajj/myntra-clone",
-      technologies: ["React", "Node.js", "MongoDB", "Express"],
+      technologies: ["JavaScript", "HTML", "CSS", "JSON Server"],
       icon: <ShoppingBag className="h-5 w-5 text-gray-800" />
     },
   ];
