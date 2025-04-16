@@ -99,11 +99,21 @@ export const ExperienceSection: React.FC = () => {
             <div>
               <TimelineItem 
                 icon={<Briefcase className="h-4 w-4" />}
+                title="Satyanam Food React"
+                organization="Personal Project"
+                period="Mar 2025 - Apr 2025"
+                description="Food ordering web application built to showcase my full-stack development skills."
+                skills={["React", "Node.js", "Express.js", "MongoDB", "Rest API", "material UI","tailwind CSS"]}
+              />
+            </div>
+            <div>
+              <TimelineItem 
+                icon={<Briefcase className="h-4 w-4" />}
                 title="Satyanam Food"
                 organization="Personal Project"
                 period="Nov 2024 - Dec 2024"
                 description="Food ordering web application built to showcase my full-stack development skills."
-                skills={["Node.js", "Express.js", "MongoDB"]}
+                skills={["Node.js", "Express.js", "MongoDB", "Rest API", "Bootstrap"]}
               />
             </div>
           </div>
