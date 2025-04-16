@@ -71,7 +71,7 @@ export const SkillsSection: React.FC = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div 
                     key={skillIndex} 
-                    className="tech-icon flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
+                    className="tech-icon flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md duration-300 border border-gray-100"
                   >
                     <div className="mb-2 flex items-center justify-center h-12">
                       {skill.icon}
