@@ -62,7 +62,7 @@ export const ContactSection: React.FC = () => {
     setTimeout(() => {
       toast({
         title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon!",
+        description: "Thanks for reaching out. Please note, this is a demonstration form, and no email has been sent.",
       });
       setFormData({ name: '', email: '', subject: '', message: '' });
       setIsSubmitting(false);
@@ -94,7 +94,8 @@ export const ContactSection: React.FC = () => {
               title="Phone"
               details="+91 7665570832"
               link="tel:+917665770832"
-            /></a>
+            />
+          </a>
           <ContactCard
             icon={<MapPin className="h-6 w-6" />}
             title="Location"
