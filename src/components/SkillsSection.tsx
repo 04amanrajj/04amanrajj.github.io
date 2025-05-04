@@ -44,6 +44,7 @@ export const SkillsSection: React.FC = () => {
         { name: "Netlify", icon: <SiNetlify className="w-7 h-7 text-[#00C7B7]" />, homepage: "https://www.netlify.com/" },
         { name: "Vercel", icon: <SiVercel className="w-7 h-7" />, homepage: "https://vercel.com/" },
         { name: "Render", icon: <SiRender className="w-7 h-7" />, homepage: "https://render.com/" },
+        { name: "NeonDB", icon: <img src="https://logo.clearbit.com/neon.tech" alt="NeonDB Logo" className="w-8 h-8" />, homepage: "https://neon.tech/" },
         { name: "Railway", icon: <SiRailway className="w-7 h-7" />, homepage: "https://railway.app/" },
         { name: "Canva", icon: <SiCanva className="w-7 h-7 text-[#00C4CC]" />, homepage: "https://www.canva.com/" },
         { name: "Docker", icon: <SiDocker className="w-7 h-7 text-[#2496ED]" />, homepage: "https://www.docker.com/" }
