@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, Monitor, ShoppingBag, Apple } from 'lucide-react';
+import { ExternalLink, Github, Monitor, ShoppingBag, Smartphone } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
@@ -101,8 +101,41 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 export const ProjectsSection: React.FC = () => {
   const projects = [
     {
+      title: "Journal Native",
+      description: "Developed a responsive mobile journal application with React Native, featuring real-time entry management, secure user authentication, offline support, and a user-friendly dashboard.",
+      images: [
+        "https://i.ibb.co/7dqDXx1R/2922b80f-a0a5-4617-9628-0c670536ede7.png",
+        "https://i.ibb.co/nsFNTqxQ/Screenshot-20250504-173003-landscape.png",
+        // "https://i.ibb.co/8D7FKdWB/Screenshot-20250504-173003-portrait.png",
+        "https://i.ibb.co/60srMrhC/Screenshot-20250504-172948-landscape.png",
+        // "https://i.ibb.co/rK5BNZyB/Screenshot-20250504-172948-portrait.png",
+        "https://i.ibb.co/PZx7Wdzq/Screenshot-20250504-172943-landscape.png",
+        // "https://i.ibb.co/LXpHpHfw/Screenshot-20250504-172943-portrait.png",
+        "https://i.ibb.co/hFf0rqWn/Screenshot-20250504-172938-landscape.png",
+        // "https://i.ibb.co/xqZSttBV/Screenshot-20250504-172938-portrait.png",
+        "https://i.ibb.co/7NyTwC07/Screenshot-20250504-172931-landscape.png",
+        // "https://i.ibb.co/Fq821Q62/Screenshot-20250504-172931-portrait.png",
+
+      ],
+      demoLink: "https://github.com/04amanrajj/journal-native/releases/",
+      githubLink: "https://github.com/04amanrajj/journal-native",
+      technologies: [
+        "React Native",
+        "TypeScript",
+        "Expo",
+        "PostgreSQL",
+        "Express.js",
+        "JWT Authentication",
+        "Gluestack-UI",
+        "Tailwind CSS",
+        "AsyncStorage",
+        "REST API"
+      ],
+      icon: <Smartphone className="h-5 w-5 text-gray-800" />
+    },
+    {
       title: "Satyanam Food React",
-      description: "Developed a full-stack food ordering application with features like user authentication, menu browsing with filters, cart functionality, and secure order processing. Implemented responsive design for all devices.",
+      description: "Built a modern full-stack food ordering platform with React, featuring dynamic menu filtering, secure user authentication, cart management, and a responsive UI optimized for all devices.",
       images: [
         "https://i.imgur.com/1mIGG01.png",
         "https://i.imgur.com/WvCglqD.png",
@@ -112,12 +145,12 @@ export const ProjectsSection: React.FC = () => {
       ],
       demoLink: "https://satyanam-food.vercel.app/",
       githubLink: "https://github.com/04amanrajj/satyanam-food-react",
-      technologies: ["React", "Node.js", "Express.js", "MongoDB", "Rest API", "material UI","tailwind CSS"],
+      technologies: ["React", "Node.js", "Express.js", "MongoDB", "Rest API", "material UI", "tailwind CSS"],
       icon: <Monitor className="h-5 w-5 text-gray-800" />
     },
     {
       title: "Satyanam Food",
-      description: "Developed a full-stack food ordering application with features like user authentication, menu browsing with filters, cart functionality, and secure order processing. Implemented responsive design for all devices.",
+      description: "Developed an initial full-stack food ordering application focused on robust backend functionality, user authentication, and a simple responsive frontend using Bootstrap.",
       images: [
         "https://i.imgur.com/oYdZa02.png",
         "https://i.imgur.com/S1lFZH4.png",
@@ -133,7 +166,7 @@ export const ProjectsSection: React.FC = () => {
     },
     {
       title: "Apple Website Clone",
-      description: "Developed a responsive Apple website clone using vanilla Javascript, featuring pixel-perfect design, dynamic content loading, mobile responsiveness, and interactive product showcases with animations.",
+      description: "Created a pixel-perfect, responsive clone of the Apple website using vanilla JavaScript, with dynamic content loading, interactive product showcases, and smooth animations.",
       images: [
         "https://i.imgur.com/st0uQDZ.png",
         "https://i.imgur.com/lfjXz9f.png",
@@ -148,7 +181,7 @@ export const ProjectsSection: React.FC = () => {
     },
     {
       title: "Myntra Clone",
-      description: "Built a Myntra e-commerce platform clone with comprehensive features including product catalog with filters, user authentication, shopping cart, responsive UI, and order processing functionality.",
+      description: "Developed a responsive Myntra e-commerce clone with product filtering, user authentication, shopping cart, and order processing, built using vanilla JavaScript and a mock JSON server.",
       images: [
         "https://i.imgur.com/fixPieI.png",
         "https://i.imgur.com/nHG6esL.jpeg",

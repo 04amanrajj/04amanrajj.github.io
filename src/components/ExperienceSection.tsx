@@ -39,7 +39,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
           {skills && (
             <div className="flex flex-wrap gap-2">
               {skills.map((skill, index) => (
-                <span 
+                <span
                   key={index}
                   className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full"
                 >
@@ -64,7 +64,7 @@ export const ExperienceSection: React.FC = () => {
             Education and experience that have shaped my skills as a developer
           </p>
         </div>
-        
+
         <div className="max-w-3xl mx-auto animated-section">
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
@@ -72,7 +72,7 @@ export const ExperienceSection: React.FC = () => {
               Education
             </h3>
             <div>
-              <TimelineItem 
+              <TimelineItem
                 icon={<BookOpen className="h-4 w-4" />}
                 title="Bachelor's in Computer Applications (BCA)"
                 organization="Mohanlal Sukhadia University"
@@ -80,7 +80,7 @@ export const ExperienceSection: React.FC = () => {
                 description="Currently pursuing a Bachelor's in Computer Applications (BCA), which is helping me build a strong foundation in computer science, programming, and IT applications."
                 skills={["Data Structures", "Java", "C/C++"]}
               />
-              <TimelineItem 
+              <TimelineItem
                 icon={<BookOpen className="h-4 w-4" />}
                 title="Senior Secondary School"
                 organization="Govardhan Senior Secondary School"
@@ -90,29 +90,39 @@ export const ExperienceSection: React.FC = () => {
               />
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
               <Briefcase className="h-5 w-5 text-primary" />
               Projects
             </h3>
             <div>
-              <TimelineItem 
+              <TimelineItem
+                icon={<Briefcase className="h-4 w-4" />}
+                title="Journal Native"
+                organization="Hobby Project"
+                period="Apr 2025 - May 2025"
+                description="A responsive mobile journal application built with React Native to showcase full-stack mobile development skills, featuring secure authentication and offline support."
+                skills={["React Native", "TypeScript", "Expo", "PostgreSQL", "Express.js", "JWT Authentication", "Gluestack-UI", "Tailwind CSS", "AsyncStorage", "REST API"]}
+              />
+            </div>
+            <div>
+              <TimelineItem
                 icon={<Briefcase className="h-4 w-4" />}
                 title="Satyanam Food React"
                 organization="Personal Project"
                 period="Mar 2025 - Apr 2025"
-                description="Food ordering web application built to showcase my full-stack development skills."
-                skills={["React", "Node.js", "Express.js", "MongoDB", "Rest API", "material UI","tailwind CSS"]}
+                description="A modern food ordering web application built with React and Express.js, featuring dynamic menus, user authentication, and a responsive UI."
+                skills={["React", "Node.js", "Express.js", "MongoDB", "Rest API", "Material UI", "Tailwind CSS"]}
               />
             </div>
             <div>
-              <TimelineItem 
+              <TimelineItem
                 icon={<Briefcase className="h-4 w-4" />}
                 title="Satyanam Food"
                 organization="Personal Project"
                 period="Nov 2024 - Dec 2024"
-                description="Food ordering web application built to showcase my full-stack development skills."
+                description="An initial food ordering web platform built with Node.js and MongoDB, focusing on core backend functionality and a simple, responsive frontend."
                 skills={["Node.js", "Express.js", "MongoDB", "Rest API", "Bootstrap"]}
               />
             </div>
