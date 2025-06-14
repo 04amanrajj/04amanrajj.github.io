@@ -200,7 +200,7 @@ export const ProjectsSection: React.FC = () => {
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between mb-8 flex-row gap-4">
+        <div className="flex items-center justify-between mb-8 flex-row gap-4 animated-section">
           <h2 className="text-2xl md:text-5xl font-bold">
             Projects
           </h2>

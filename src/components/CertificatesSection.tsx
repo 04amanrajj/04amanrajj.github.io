@@ -35,7 +35,7 @@ const Certificates = () => {
     <section id='certificate' className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animated-section">
           <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Award className="w-4 h-4" />
             Certifications & Achievements
@@ -49,7 +49,7 @@ const Certificates = () => {
         </div>
 
         {/* Certificates Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto animated-section">
           {certificates.map((cert, index) => (
             <Card 
               key={cert.id} 

@@ -55,7 +55,7 @@ export const SkillsSection: React.FC = () => {
   return (
     <section id="skills" className="py-20">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animated-section">
           <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-6">
             <span className=" text-primary ">Technical</span> Skills
           </h2>
