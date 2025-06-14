@@ -9,6 +9,7 @@ import SkillsSection from '@/components/SkillsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import GoToTop from '@/components/GoToTop';
+import CertificatesSection from '@/components/CertificatesSection';
 
 const Index = () => {
   React.useEffect(() => {
@@ -63,6 +64,7 @@ const Index = () => {
         <AboutSection />
         <ExperienceSection />
         <ProjectsSection />
+        <CertificatesSection />
         <SkillsSection />
         <ContactSection />
       </main>
