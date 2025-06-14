@@ -55,13 +55,14 @@ export const SkillsSection: React.FC = () => {
   return (
     <section id="skills" className="py-20">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12 animated-section">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-6">
+            <span className=" text-primary ">Technical</span> Skills
+          </h2>
+          <p className="text-xl text-gray-600 mx-auto">
             Technologies and tools I work with
           </p>
         </div>
-
         <div className="space-y-12 animated-section">
           {skillCategories.map((category, categoryIndex) => (
             <div key={categoryIndex}>

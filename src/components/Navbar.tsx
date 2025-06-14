@@ -27,6 +27,7 @@ export const Navbar: React.FC = () => {
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Certificate', href: '#certificate' },
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -64,13 +65,7 @@ export const Navbar: React.FC = () => {
                 <div className="flex flex-col h-full">
                   <div className="flex justify-between items-center mb-8">
                     <h3 className="text-lg font-medium">Menu</h3>
-                    <Button 
-                      variant="ghost" 
-                      size="icon" 
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      <X className="h-5 w-5" />
-                    </Button>
+
                   </div>
                   <nav className="flex flex-col space-y-4">
                     {navLinks.map((link) => (

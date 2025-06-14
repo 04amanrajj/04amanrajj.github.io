@@ -200,12 +200,18 @@ export const ProjectsSection: React.FC = () => {
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12 animated-section">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            A selection of my recent work and personal projects
-          </p>
+        <div className="flex items-center justify-between mb-8 flex-row gap-4">
+          <h2 className="text-2xl md:text-5xl font-bold">
+            Projects
+          </h2>
+          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+            <Monitor className="w-4 h-4" />
+            Portfolio
+          </div>
         </div>
+        <p className="text-gray-600  text-xl mb-8 md:mb-12 flex items-center justify-start">
+          Some of my recent professional work and personal projects that showcase my skills, creativity, and growth as a developer
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animated-section">
           {projects.map((project, index) => (

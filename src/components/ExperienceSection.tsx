@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { BookOpen, Briefcase } from 'lucide-react';
@@ -58,13 +57,14 @@ export const ExperienceSection: React.FC = () => {
   return (
     <section id="experience" className="py-20">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12 animated-section">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My personal journey</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-6">
+            Experience   <span className=" text-primary "> &</span> Education
+          </h2>
+          <p className="text-xl text-gray-600 mx-auto">
             Education and experience that have shaped my skills as a developer
           </p>
         </div>
-
         <div className="max-w-3xl mx-auto animated-section">
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
