@@ -11,7 +11,7 @@ const Certificates = () => {
       title: "GitHub Certification",
       issuer: "LinkedIn Learning",
       description: "Version control, collaboration workflows, project table, and modern development practices",
-      date: "2024",
+      date: "2025",
       skills: ["Version Control", "Git", "Collaboration", "DevOps"],
       status: "Completed",
       link: "https://lnkd.in/dWX7aBRK",
