@@ -84,13 +84,12 @@ export const ExperienceSection: React.FC = () => {
                 icon={<BookOpen className="h-4 w-4" />}
                 title="Senior Secondary School"
                 organization="Govardhan Senior Secondary School"
-                period="2020 - 2023"
+                period="2021 - 2023"
                 description="I've completed Schooling (Science + Maths), providing me with a solid foundation in scientific concepts and mathematics principles."
                 skills={["Mathematics", "Physics", "Computer Science"]}
               />
             </div>
           </div>
-
           <div>
             <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
               <Briefcase className="h-5 w-5 text-primary" />
