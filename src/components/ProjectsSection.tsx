@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, Monitor, ShoppingBag, Smartphone } from 'lucide-react';
+import { ExternalLink, Github, Monitor, ShoppingBag, Smartphone ,GalleryVerticalEnd } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
@@ -205,7 +205,7 @@ export const ProjectsSection: React.FC = () => {
             Projects
           </h2>
           <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-            <Monitor className="w-4 h-4" />
+            <GalleryVerticalEnd className="w-4 h-4" />
             Portfolio
           </div>
         </div>
