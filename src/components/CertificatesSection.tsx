@@ -1,5 +1,5 @@
 
-import { Award, ExternalLink, Calendar, BookOpen } from 'lucide-react';
+import { Award, ExternalLink, Calendar, BookOpen, Github, CodeXml, Linkedin } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -8,23 +8,54 @@ const Certificates = () => {
   const certificates = [
     {
       id: 1,
-      title: "GitHub Certification",
-      issuer: "LinkedIn Learning",
-      description: "Version control, collaboration workflows, project table, and modern development practices",
-      date: "2025",
-      skills: ["Version Control", "Git", "Collaboration", "DevOps"],
+      title: "GitHub Foundations Certification",
+      issuer: "LinkedIn Learning & GitHub",
+      description: "Comprehensive prep path for GitHub Foundations Certification: covers Git basics, repositories, branching, collaboration, issues & projects, Actions, Copilot, Codespaces & security.",
+      duration: "4 Hours",
+      skills: [
+        "Git & GitHub Fundamentals",
+        "Version Control",
+        "Collaboration Workflows",
+        "Issues & Projects",
+        "GitHub Actions",
+        "GitHub Copilot",
+        "Codespaces",
+        "Security & Admin"
+      ],
       status: "Completed",
       link: "https://lnkd.in/dWX7aBRK",
       color: "bg-gradient-to-br from-gray-800 to-gray-900",
-      icon: Award
+      icon: Github
     },
     {
       id: 2,
+      title: "Full‑Stack Web Developer",
+      issuer: "LinkedIn Learning",
+      description: "Comprehensive full‑stack path covering front‑end (HTML, CSS, JavaScript, React), back‑end (Node.js, databases, REST APIs), version control, collaboration, DevOps practices, and career‑ready projects.",
+      duration: "32 Hours",
+      skills: [
+        "Web Development",
+        "Full‑Stack Development",
+        "Front‑End (HTML, CSS, JS, React)",
+        "Back‑End (Node.js, REST APIs)",
+        "Databases (SQL, NoSQL)",
+        "Version Control (Git)",
+        "DevOps",
+        "Collaboration"
+      ],
+      status: "Completed",
+      link: "https://lnkd.in/dk6BZGYG",
+      color: "bg-gradient-to-br from-gray-800 to-gray-900",
+      icon: CodeXml
+    },
+
+    {
+      id: 3,
       title: "NPTEL Certification",
       issuer: "NPTEL",
       description: "Successfully completed 10 hours of online Soft Skills Training on interview readiness provided by NPTEL",
-      date: "2024",
-      skills: ["Academic Excellence","Soft Skills", "Self-Learning", "Technical Knowledge"],
+      duration: "10 Hours",
+      skills: ["Academic Excellence", "Soft Skills", "Self-Learning", "Technical Knowledge"],
       status: "Completed",
       color: "bg-gradient-to-br from-blue-500 to-blue-600",
       icon: BookOpen
@@ -51,8 +82,8 @@ const Certificates = () => {
         {/* Certificates Grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto animated-section">
           {certificates.map((cert, index) => (
-            <Card 
-              key={cert.id} 
+            <Card
+              key={cert.id}
               className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg hover:-translate-y-2 bg-white overflow-hidden"
             >
               <CardHeader className="relative">
@@ -71,9 +102,9 @@ const Certificates = () => {
                       </CardDescription>
                     </div>
                   </div>
-                  <Badge variant="secondary" className="bg-green-100 text-green-800 font-medium">
+                  <Badge variant="secondary" className="bg-green-100 whitespace-nowrap text-green-800 font-medium w-[max-content]">
                     <Calendar className="w-3 h-3 mr-1" />
-                    {cert.date}
+                    {cert.duration}
                   </Badge>
                 </div>
               </CardHeader>
@@ -86,9 +117,9 @@ const Certificates = () => {
                 {/* Skills Tags */}
                 <div className="flex flex-wrap gap-2">
                   {cert.skills.map((skill) => (
-                    <Badge 
-                      key={skill} 
-                      variant="outline" 
+                    <Badge
+                      key={skill}
+                      variant="outline"
                       className="bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100 transition-colors duration-200"
                     >
                       {skill}
@@ -99,22 +130,22 @@ const Certificates = () => {
                 {/* Action Button */}
                 <div className="pt-4">
                   {cert.link ? (
-                    <Button 
+                    <Button
                       asChild
                       className="w-full text-primary hover:from-blue-700 hover:to-purple-700 text-white font-medium transition-all duration-300 shadow-md hover:shadow-lg"
                     >
                       <a href={cert.link} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-4 h-4 mr-2" />
+                        <ExternalLink className="w-4 h-4" />
                         View Certificate
                       </a>
                     </Button>
                   ) : (
-                    <Button 
+                    <Button
                       variant="outline"
                       className="w-full border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-300"
                       disabled
                     >
-                      <BookOpen className="w-4 h-4 mr-2" />
+                      <BookOpen className="w-4 h-4" />
                       Certificate Pending Upload
                     </Button>
                   )}
