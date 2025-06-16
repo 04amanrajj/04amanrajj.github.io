@@ -1,5 +1,6 @@
 
 import { Award, ExternalLink, Calendar, BookOpen, Github, CodeXml, Linkedin } from 'lucide-react';
+import { FaDocker } from "react-icons/fa";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -8,27 +9,6 @@ const Certificates = () => {
   const certificates = [
     {
       id: 1,
-      title: "GitHub Foundations Certification",
-      issuer: "LinkedIn Learning & GitHub",
-      description: "Comprehensive prep path for GitHub Foundations Certification: covers Git basics, repositories, branching, collaboration, issues & projects, Actions, Copilot, Codespaces & security.",
-      duration: "4 Hours",
-      skills: [
-        "Git & GitHub Fundamentals",
-        "Version Control",
-        "Collaboration Workflows",
-        "Issues & Projects",
-        "GitHub Actions",
-        "GitHub Copilot",
-        "Codespaces",
-        "Security & Admin"
-      ],
-      status: "Completed",
-      link: "https://lnkd.in/dWX7aBRK",
-      color: "bg-gradient-to-br from-gray-800 to-gray-900",
-      icon: Github
-    },
-    {
-      id: 2,
       title: "Full‑Stack Web Developer",
       issuer: "LinkedIn Learning",
       description: "Comprehensive full‑stack path covering front‑end (HTML, CSS, JavaScript, React), back‑end (Node.js, databases, REST APIs), version control, collaboration, DevOps practices, and career‑ready projects.",
@@ -48,14 +28,52 @@ const Certificates = () => {
       color: "bg-gradient-to-br from-gray-800 to-gray-900",
       icon: CodeXml
     },
-
+    {
+      id: 2,
+      title: "GitHub Foundations Professional",
+      issuer: "LinkedIn Learning & GitHub",
+      description: "GitHub Foundations Certification: covers Git, repositories, branching, collaboration, issues & projects, Actions, Copilot, Codespaces & security.",
+      duration: "10 Hours",
+      skills: [
+        "Git & GitHub Fundamentals",
+        "Version Control",
+        "Collaboration Workflows",
+        "Issues & Projects",
+        "GitHub Actions",
+        "GitHub Copilot",
+        "Codespaces",
+        "Security & Admin"
+      ],
+      status: "Completed",
+      link: "https://www.linkedin.com/learning/certificates/ec2324764e42eda20a61e1c028c0d2c72c87af47c96967043c3d821cd502f8ef",
+      color: "bg-gradient-to-br from-gray-800 to-gray-900",
+      icon: Github
+    },
     {
       id: 3,
+      title: "Docker Foundations Professional",
+      issuer: "Docker, Inc. & LinkedIn Learning",
+      description: "Comprehensive Docker Foundations: covers container fundamentals and CLI, Dockerfile creation, image building, managing lifecycle and networking, multi‑container orchestration with Docker Compose, and real‑world deployment workflows.",
+      duration: "4 Hours",
+      skills: [
+        "Docker Containerization",
+        "Image Building & Management",
+        "Container Operations",
+        "Docker Compose",
+        "Container Networking",
+        "Docker Deployment"
+      ],
+      link: "https://lnkd.in/d2fuz8mc",
+      color: "bg-gradient-to-br from-blue-500 to-blue-600",
+      icon: FaDocker
+    },
+    {
+      id: 4,
       title: "NPTEL Certification",
       issuer: "NPTEL",
-      description: "Successfully completed 10 hours of online Soft Skills Training on interview readiness provided by NPTEL",
+      description: "Online soft‑skills program coordinated by IIT Madras via NPTEL: included interactive sessions on communication, resume and email writing, mock interviews, employability assessments, and English proficiency testing designed to build confidence, professionalism, and interview-readiness.",
       duration: "10 Hours",
-      skills: ["Academic Excellence", "Soft Skills", "Self-Learning", "Technical Knowledge"],
+      skills: ["Academic Excellence", "Communication", "Soft Skills", "Self-Learning", "Technical Knowledge"],
       status: "Completed",
       color: "bg-gradient-to-br from-blue-500 to-blue-600",
       icon: BookOpen
@@ -86,7 +104,7 @@ const Certificates = () => {
               key={cert.id}
               className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg hover:-translate-y-2 bg-white overflow-hidden"
             >
-              <CardHeader className="relative">
+              <CardHeader className="relative mb-5">
                 <div className={`absolute inset-0 ${cert.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
                 <div className="flex items-start justify-between relative z-10">
                   <div className="flex items-center gap-3">
