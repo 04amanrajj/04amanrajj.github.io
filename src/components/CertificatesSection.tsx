@@ -71,7 +71,7 @@ const Certificates = () => {
       id: 4,
       title: "NPTEL Certification",
       issuer: "NPTEL",
-      description: "Online soft‑skills program coordinated by IIT Madras via NPTEL: included interactive sessions on communication, resume and email writing, mock interviews, employability assessments, and English proficiency testing designed to build confidence, professionalism, and interview-readiness.",
+      description: "Online soft‑skills program coordinated by IIT Madras via NPTEL: included interactive sessions on communication, mock interviews, employability assessments, and English proficiency testing designed to build confidence, professionalism, and interview-readiness.",
       duration: "10 Hours",
       skills: ["Academic Excellence", "Communication", "Soft Skills", "Self-Learning", "Technical Knowledge"],
       status: "Completed",
