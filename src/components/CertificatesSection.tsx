@@ -75,6 +75,7 @@ const Certificates = () => {
       duration: "10 Hours",
       skills: ["Academic Excellence", "Communication", "Soft Skills", "Self-Learning", "Technical Knowledge"],
       status: "Completed",
+      link:"https://drive.google.com/file/d/1_sSVBZiy65ARIA8SFbVvH71NNCNm8VsM/view?usp=sharing",
       color: "bg-gradient-to-br from-blue-500 to-blue-600",
       icon: BookOpen
     }
