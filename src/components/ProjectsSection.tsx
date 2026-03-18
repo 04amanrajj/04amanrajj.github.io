@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, Monitor, ShoppingBag, Smartphone ,GalleryVerticalEnd } from 'lucide-react';
+import { ExternalLink, Github, Monitor, ShoppingBag, Smartphone ,GalleryVerticalEnd, BookOpen } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
@@ -86,7 +86,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </Button>
         )}
         {githubLink && (
-          <Button variant="outline" size="sm" asChild>
+          <Button variant="default" size="sm" className="bg-[#24292f] hover:bg-[#2ea44f] text-white border-none shadow-sm transition-all duration-300 active:scale-[0.98]" asChild>
             <a href={githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
               <Github className="h-4 w-4" />
               Code
@@ -100,6 +100,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
 export const ProjectsSection: React.FC = () => {
   const projects = [
+    {
+      title: "Docker Learnings",
+      description: "A comprehensive DevOps & Docker learning portfolio showcasing a 4-week journey of learning and understanding containerization technologies.",
+      images: [
+        "https://i.ibb.co/hFbPZ5K5/Screenshot-from-2026-05-27-17-09-05.png",
+        "https://i.ibb.co/tP3Wjh8D/Screenshot-from-2026-05-27-17-09-26.png",
+        "https://i.ibb.co/CpzKTHwD/Screenshot-from-2026-05-27-17-09-52.png",
+        "https://i.ibb.co/WWSz3fSF/Screenshot-from-2026-05-27-17-09-59.png"
+      ],
+      demoLink: "https://04amanrajj.github.io/Docker-learning/",
+      githubLink: "https://github.com/04amanrajj/Docker-learning",
+      technologies: [
+        "Docker", "Docker Compose", "Multi Container", "Volumes", "Network Topology", "Nginx", "Prometheus", "Grafana", "DevOps"
+      ],
+      icon: <BookOpen className="h-5 w-5 text-gray-800" />
+    },
     {
       title: "Journal Native",
       description: "Developed a responsive mobile journal application with React Native, featuring real-time entry management, secure user authentication, offline support, and a user-friendly dashboard.",
