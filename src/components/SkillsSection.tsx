@@ -1,6 +1,6 @@
 import React from 'react';
 import { DiHtml5, DiCss3, DiJavascript1, DiReact, DiNodejs, DiMongodb, DiGit, DiNpm } from 'react-icons/di';
-import { SiTailwindcss, SiMui, SiBootstrap, SiExpress, SiPostgresql, SiRedis, SiYaml, SiLinux, SiVisualstudiocode, SiGithub, SiPostman, SiNetlify, SiVercel, SiRender, SiRailway, SiCanva, SiDocker } from 'react-icons/si';
+import { SiTailwindcss, SiMui, SiBootstrap, SiExpress, SiPostgresql, SiRedis, SiYaml, SiLinux, SiVisualstudiocode, SiGithub, SiPostman, SiNetlify, SiVercel, SiRender, SiRailway, SiCanva, SiDocker, SiCloudflare, SiAmazons3, SiSupabase } from 'react-icons/si';
 
 interface SkillCategory {
   title: string;
@@ -29,6 +29,8 @@ export const SkillsSection: React.FC = () => {
         { name: "MongoDB", icon: <DiMongodb className="w-8 h-8 text-[#47A248]" />, homepage: "https://www.mongodb.com/" },
         { name: "PostgreSQL", icon: <SiPostgresql className="w-7 h-7 text-[#336791]" />, homepage: "https://www.postgresql.org/" },
         { name: "Redis", icon: <SiRedis className="w-7 h-7 text-[#DC382D]" />, homepage: "https://redis.io/" },
+        { name: "AWS S3", icon: <SiAmazons3 className="w-7 h-7 text-[#569A31]" />, homepage: "https://aws.amazon.com/s3/" },
+        { name: "Cloudflare R2", icon: <SiCloudflare className="w-7 h-7 text-[#F38020]" />, homepage: "https://developers.cloudflare.com/r2/" },
         { name: "YAML", icon: <SiYaml className="w-7 h-7" />, homepage: "https://yaml.org/" },
       ]
     },
@@ -44,10 +46,11 @@ export const SkillsSection: React.FC = () => {
         { name: "Netlify", icon: <SiNetlify className="w-7 h-7 text-[#00C7B7]" />, homepage: "https://www.netlify.com/" },
         { name: "Vercel", icon: <SiVercel className="w-7 h-7" />, homepage: "https://vercel.com/" },
         { name: "Render", icon: <SiRender className="w-7 h-7" />, homepage: "https://render.com/" },
-        { name: "NeonDB", icon: <img src="https://logo.clearbit.com/neon.tech" alt="NeonDB Logo" className="w-8 h-8" />, homepage: "https://neon.tech/" },
+        { name: "NeonDB", icon: <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="#00E599"/><path d="M7 8h10v2H7V8zm0 3h7v2H7v-2zm0 3h10v2H7v-2z" fill="#0A0A0A"/></svg>, homepage: "https://neon.tech/" },
         { name: "Railway", icon: <SiRailway className="w-7 h-7" />, homepage: "https://railway.app/" },
         { name: "Canva", icon: <SiCanva className="w-7 h-7 text-[#00C4CC]" />, homepage: "https://www.canva.com/" },
-        { name: "Docker", icon: <SiDocker className="w-7 h-7 text-[#2496ED]" />, homepage: "https://www.docker.com/" }
+        { name: "Docker", icon: <SiDocker className="w-7 h-7 text-[#2496ED]" />, homepage: "https://www.docker.com/" },
+        { name: "Supabase", icon: <SiSupabase className="w-7 h-7 text-[#3ECF8E]" />, homepage: "https://supabase.com/" }
       ]
     }
   ];
