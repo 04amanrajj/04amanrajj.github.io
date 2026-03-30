@@ -25,16 +25,16 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
         <div className="rounded-full p-2 bg-primary text-white">
           {icon}
         </div>
-        <div className="w-[2px] h-full bg-gray-200"></div>
+        <div className="w-[2px] h-full bg-gray-200 dark:bg-gray-700"></div>
       </div>
-      <Card className="mb-8 flex-1">
+      <Card className="mb-8 flex-1 dark:bg-gray-800 dark:border-gray-700">
         <CardContent className="p-6">
           <h3 className="text-lg font-medium">{title}</h3>
-          <div className="flex items-center justify-between text-gray-500 text-sm mb-4">
+          <div className="flex items-center justify-between text-gray-500 dark:text-gray-400 text-sm mb-4">
             <span>{organization}</span>
             <span>{period}</span>
           </div>
-          <p className="text-gray-700 mb-4">{description}</p>
+          <p className="text-gray-700 dark:text-gray-300 mb-4">{description}</p>
           {skills && (
             <div className="flex flex-wrap gap-2">
               {skills.map((skill, index) => (
@@ -55,13 +55,13 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
 
 export const ExperienceSection: React.FC = () => {
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-20 dark:bg-gray-950">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 animated-section">
-          <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Experience   <span className=" text-primary "> &</span> Education
           </h2>
-          <p className="text-xl text-gray-600 mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-400 mx-auto">
             Education and experience that have shaped my skills as a developer
           </p>
         </div>

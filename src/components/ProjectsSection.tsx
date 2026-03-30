@@ -33,7 +33,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   };
 
   return (
-    <Card className="overflow-hidden border-none shadow-lg h-full flex flex-col">
+    <Card className="overflow-hidden border-none shadow-lg h-full flex flex-col dark:bg-gray-800">
       <div className="relative h-48 overflow-hidden group">
         <img
           src={images[currentImageIndex]}
@@ -41,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105"
         />
         {icon && (
-          <div className="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full">
+          <div className="absolute top-3 right-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-2 rounded-full">
             {icon}
           </div>
         )}
@@ -74,7 +74,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-gray-700">{description}</p>
+        <p className="text-gray-700 dark:text-gray-300">{description}</p>
       </CardContent>
       <CardFooter className="flex gap-2">
         {demoLink && (
@@ -214,18 +214,18 @@ export const ProjectsSection: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="pt-20 bg-gray-50">
+    <section id="projects" className="pt-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between mb-8 flex-row gap-4 animated-section">
           <h2 className="text-2xl md:text-5xl font-bold">
             Projects
           </h2>
-          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+          <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-medium">
             <GalleryVerticalEnd className="w-4 h-4" />
             Portfolio
           </div>
         </div>
-        <p className="text-gray-600  text-xl mb-8 md:mb-12 flex items-center justify-start">
+        <p className="text-gray-600 dark:text-gray-400  text-xl mb-8 md:mb-12 flex items-center justify-start">
           Some of my recent professional work and personal projects that showcase my skills, creativity, and growth as a developer
         </p>
 
