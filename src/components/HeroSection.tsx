@@ -11,9 +11,9 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden dark:bg-gray-950">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-white"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-950"></div>
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -22,11 +22,11 @@ export const HeroSection: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
               Hi, I'm <span className="text-primary">Aman Raj</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-700">
+            <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300">
               MERN-Stack Developer | API Development | Database Management
             </p>
-            <p className="text-lg text-gray-600 max-w-lg">
-              I build exceptional software solutions, integrating APIs, databases, and creating user experiences. Proficient in modern design, microservices, and testing <a href="https://github.com/04amanrajj/linux-setup/releases/tag/release">tools</a>.
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-lg">
+              I build exceptional software solutions, integrating APIs, databases, and creating user experiences. Proficient in modern design, microservices, and testing <a href="https://github.com/04amanrajj/linux-setup/releases/tag/release" className="text-primary hover:underline">tools</a>.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button asChild>

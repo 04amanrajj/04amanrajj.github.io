@@ -8,7 +8,7 @@ const AboutCard: React.FC<{
   value: string;
 }> = ({ icon, title, value }) => {
   return (
-    <Card className="border-none shadow-lg">
+    <Card className="border-none shadow-lg dark:bg-gray-800">
       <CardContent className="p-6 flex flex-col items-center text-center">
         <div className="bg-primary/10 p-3 rounded-full mb-4">
           {icon}
@@ -22,28 +22,28 @@ const AboutCard: React.FC<{
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 animated-section">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            About  <span className=" text-primary "> Me</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            About  <span className=" text-primary ">Me</span>
           </h2>
-          <p className="text-xl text-gray-600 mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-400 mx-auto">
             Innovative Software Engineer with expertise in building scalable applications
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animated-section">
           <div className="space-y-6">
-            <p className="text-gray-700">
+            <p className="text-gray-700 dark:text-gray-300">
               I'm a Fullstack Software Engineer proficient in JavaScript, React, Node.js, Express, Angular, MongoDB, and PostgreSQL,
               adept at building scalable software solutions, integrating APIs, databases, and creating user experiences.
               Proficient in modern design, microservices, unit testing tools, and with a collaborative and detail-oriented approach.
             </p>
-            <p className="text-gray-700">
+            <p className="text-gray-700 dark:text-gray-300">
               Currently pursuing a Bachelor's in Computer Applications (BCA), which is helping me build a strong foundation in computer science,
               programming, and IT applications.
             </p>
-            <p className="text-gray-700">
+            <p className="text-gray-700 dark:text-gray-300">
               I've completed Schooling (Science + Maths), providing me with a solid foundation in scientific concepts and mathematics principles.
             </p>
           </div>
