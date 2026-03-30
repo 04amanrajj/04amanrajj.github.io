@@ -1,14 +1,16 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Github, Mail, Linkedin, Menu, X } from 'lucide-react';
+import { Github, Mail, Linkedin, Menu, Sun, Moon } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { useTheme } from '@/hooks/use-theme';
 
 export const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = React.useState(false);
   const isMobile = useIsMobile();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -41,9 +43,11 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        scrolled
+          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-sm'
+          : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -53,54 +57,58 @@ export const Navbar: React.FC = () => {
               Aman Raj
             </a>
           </div>
-          
-          {isMobile ? (
-            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-5 w-5" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[300px]">
-                <div className="flex flex-col h-full">
-                  <div className="flex justify-between items-center mb-8">
-                    <h3 className="text-lg font-medium">Menu</h3>
 
-                  </div>
-                  <nav className="flex flex-col space-y-4">
-                    {navLinks.map((link) => (
-                      <Button 
-                        key={link.name} 
-                        variant="ghost" 
-                        className="justify-start text-lg"
-                        onClick={() => scrollToSection(link.href)}
-                      >
-                        {link.name}
-                      </Button>
-                    ))}
-                  </nav>
-                  <div className="mt-auto">
-                    <div className="flex space-x-2 mt-6">
-                      <Button size="icon" variant="outline" asChild>
-                        <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">
-                          <Github className="h-5 w-5" />
-                        </a>
-                      </Button>
-                      <Button size="icon" variant="outline" asChild>
-                        <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer">
-                          <Linkedin className="h-5 w-5" />
-                        </a>
-                      </Button>
-                      <Button size="icon" variant="outline" asChild>
-                        <a href="mailto:04.aman.raj@gmail.com">
-                          <Mail className="h-5 w-5" />
-                        </a>
-                      </Button>
+          {isMobile ? (
+            <div className="flex items-center gap-2">
+              <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
+                {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              </Button>
+              <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Menu className="h-5 w-5" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[300px] dark:bg-gray-900">
+                  <div className="flex flex-col h-full">
+                    <div className="flex justify-between items-center mb-8">
+                      <h3 className="text-lg font-medium">Menu</h3>
+                    </div>
+                    <nav className="flex flex-col space-y-4">
+                      {navLinks.map((link) => (
+                        <Button
+                          key={link.name}
+                          variant="ghost"
+                          className="justify-start text-lg"
+                          onClick={() => scrollToSection(link.href)}
+                        >
+                          {link.name}
+                        </Button>
+                      ))}
+                    </nav>
+                    <div className="mt-auto">
+                      <div className="flex space-x-2 mt-6">
+                        <Button size="icon" variant="outline" asChild>
+                          <a href="https://github.com/04amanrajj" target="_blank" rel="noopener noreferrer">
+                            <Github className="h-5 w-5" />
+                          </a>
+                        </Button>
+                        <Button size="icon" variant="outline" asChild>
+                          <a href="https://www.linkedin.com/in/aman-raj-226875339" target="_blank" rel="noopener noreferrer">
+                            <Linkedin className="h-5 w-5" />
+                          </a>
+                        </Button>
+                        <Button size="icon" variant="outline" asChild>
+                          <a href="mailto:04.aman.raj@gmail.com">
+                            <Mail className="h-5 w-5" />
+                          </a>
+                        </Button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SheetContent>
-            </Sheet>
+                </SheetContent>
+              </Sheet>
+            </div>
           ) : (
             <>
               <nav className="hidden md:flex items-center space-x-6">
@@ -119,6 +127,9 @@ export const Navbar: React.FC = () => {
                 ))}
               </nav>
               <div className="hidden md:flex items-center space-x-2">
+                <Button size="icon" variant="ghost" onClick={toggleTheme} aria-label="Toggle theme">
+                  {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                </Button>
                 <Button size="icon" variant="ghost" asChild>
                   <a href="https://github.com/04amanrajj" target="_blank" rel="noopener noreferrer">
                     <Github className="h-5 w-5" />
@@ -144,3 +155,4 @@ export const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+
