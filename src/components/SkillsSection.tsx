@@ -56,13 +56,13 @@ export const SkillsSection: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20 dark:bg-gray-950">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 animated-section">
-          <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             <span className=" text-primary ">Technical</span> Skills
           </h2>
-          <p className="text-xl text-gray-600 mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-400 mx-auto">
             Technologies and tools I work with
           </p>
         </div>
@@ -76,7 +76,7 @@ export const SkillsSection: React.FC = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skillIndex}
-                    className="tech-icon flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md duration-300 border border-gray-100"
+                    className="tech-icon flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md duration-300 border border-gray-100 dark:border-gray-700"
                   >
                     <a
                       href={skill.homepage}

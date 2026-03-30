@@ -82,18 +82,18 @@ const Certificates = () => {
   ];
 
   return (
-    <section id='certificate' className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id='certificate' className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16 animated-section">
-          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Award className="w-4 h-4" />
             Certifications & Achievements
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Professional <span className=" text-primary "> Certifications</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Continuous learning and professional development through recognized certification programs
           </p>
         </div>
@@ -103,7 +103,7 @@ const Certificates = () => {
           {certificates.map((cert, index) => (
             <Card
               key={cert.id}
-              className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg hover:-translate-y-2 bg-white overflow-hidden"
+              className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg hover:-translate-y-2 bg-white dark:bg-gray-800 overflow-hidden"
             >
               <CardHeader className="relative mb-5">
                 <div className={`absolute inset-0 ${cert.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
@@ -113,10 +113,10 @@ const Certificates = () => {
                       <cert.icon className="w-6 h-6" />
                     </div>
                     <div>
-                      <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                      <CardTitle className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                         {cert.title}
                       </CardTitle>
-                      <CardDescription className="text-base font-medium text-gray-600 mt-1">
+                      <CardDescription className="text-base font-medium text-gray-600 dark:text-gray-400 mt-1">
                         {cert.issuer}
                       </CardDescription>
                     </div>
@@ -129,7 +129,7 @@ const Certificates = () => {
               </CardHeader>
 
               <CardContent className="space-y-6">
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   {cert.description}
                 </p>
 
@@ -139,7 +139,7 @@ const Certificates = () => {
                     <Badge
                       key={skill}
                       variant="outline"
-                      className="bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100 transition-colors duration-200"
+                      className="bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors duration-200"
                     >
                       {skill}
                     </Badge>

@@ -16,7 +16,7 @@ interface ContactCardProps {
 
 const ContactCard: React.FC<ContactCardProps> = ({ icon, title, details, link }) => {
   return (
-    <Card className="border-none shadow-sm hover:shadow-md transition-shadow">
+    <Card className="border-none shadow-sm hover:shadow-md transition-shadow dark:bg-gray-800">
       <CardContent className="p-6 flex flex-col items-center text-center">
         <div className="bg-primary/10 p-3 rounded-full mb-4 text-primary">
           {icon}
@@ -25,14 +25,14 @@ const ContactCard: React.FC<ContactCardProps> = ({ icon, title, details, link })
         {link ? (
           <a
             href={link}
-            className="text-gray-700 hover:text-primary transition-colors"
+            className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors"
             target="_blank"
             rel="noopener noreferrer"
           >
             {details}
           </a>
         ) : (
-          <p className="text-gray-700">{details}</p>
+          <p className="text-gray-700 dark:text-gray-300">{details}</p>
         )}
       </CardContent>
     </Card>
@@ -70,11 +70,11 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12 animated-section">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Contact</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Let's connect! Reach out to me through any of these channels
           </p>
         </div>
@@ -162,9 +162,9 @@ export const ContactSection: React.FC = () => {
           </div>
 
           <div className="flex flex-col justify-center">
-            <div className="bg-white rounded-lg p-6 shadow-md">
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
               <h3 className="text-2xl font-semibold mb-6">Connect with me</h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 dark:text-gray-400 mb-6">
                 Feel free to connect with me on social media or check out my work on GitHub.
                 I'm always open to new opportunities and collaborations!
               </p>
@@ -182,9 +182,9 @@ export const ContactSection: React.FC = () => {
                   href="https://github.com/04amanrajj"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 bg-gray-800/10 hover:bg-gray-800/20 rounded-md transition-colors"
+                  className="flex items-center gap-3 p-3 bg-gray-800/10 dark:bg-gray-700/40 hover:bg-gray-800/20 dark:hover:bg-gray-700/60 rounded-md transition-colors"
                 >
-                  <Github className="h-5 w-5 text-gray-800" />
+                  <Github className="h-5 w-5 text-gray-800 dark:text-gray-200" />
                   <span>GitHub</span>
                 </a>
               </div>
