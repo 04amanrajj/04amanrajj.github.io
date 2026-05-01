@@ -1,71 +1,75 @@
 import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Code, Globe, Database } from 'lucide-react';
+import { Code, Globe, Database, ChevronRight } from 'lucide-react';
 
-const AboutCard: React.FC<{
-  icon: React.ReactNode;
-  title: string;
-  value: string;
-}> = ({ icon, title, value }) => {
-  return (
-    <Card className="border-none shadow-lg dark:bg-gray-800">
-      <CardContent className="p-6 flex flex-col items-center text-center">
-        <div className="bg-primary/10 p-3 rounded-full mb-4">
-          {icon}
-        </div>
-        <h3 className="font-medium text-lg mb-1">{title}</h3>
-        <p className="text-3xl font-bold">{value}</p>
-      </CardContent>
-    </Card>
-  );
-};
+const StatCard: React.FC<{ icon: React.ReactNode; value: string; label: string; color: string }> = ({ icon, value, label, color }) => (
+  <div className={`flex-1 flex flex-col items-center justify-center py-4 px-2 rounded-2xl ${color} gap-1`}>
+    <div className="mb-1">{icon}</div>
+    <p className="text-2xl font-bold tracking-tight">{value}</p>
+    <p className="text-xs font-medium opacity-70">{label}</p>
+  </div>
+);
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="about" className="py-16 md:py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16 animated-section">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            About  <span className=" text-primary ">Me</span>
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 mx-auto">
-            Innovative Software Engineer with expertise in building scalable applications
-          </p>
+
+        {/* Section label */}
+        <div className="flex items-center gap-2 mb-6 md:mb-12 md:justify-center">
+          <span className="w-6 h-0.5 bg-primary rounded-full" />
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary">About Me</p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animated-section">
-          <div className="space-y-6">
-            <p className="text-gray-700 dark:text-gray-300">
-              I'm a Fullstack Software Engineer proficient in JavaScript, React, Node.js, Express, Angular, MongoDB, and PostgreSQL,
-              adept at building scalable software solutions, integrating APIs, databases, and creating user experiences.
-              Proficient in modern design, microservices, unit testing tools, and with a collaborative and detail-oriented approach.
+
+        {/* Stats row — prominent on mobile */}
+        <div className="flex gap-3 mb-8 animated-section">
+          <StatCard
+            icon={<Code className="h-5 w-5 text-blue-600 dark:text-blue-400" />}
+            value="10+" label="Projects"
+            color="bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-100"
+          />
+          <StatCard
+            icon={<Globe className="h-5 w-5 text-purple-600 dark:text-purple-400" />}
+            value="15+" label="Technologies"
+            color="bg-purple-50 dark:bg-purple-900/20 text-purple-900 dark:text-purple-100"
+          />
+          <StatCard
+            icon={<Database className="h-5 w-5 text-green-600 dark:text-green-400" />}
+            value="3+" label="Databases"
+            color="bg-green-50 dark:bg-green-900/20 text-green-900 dark:text-green-100"
+          />
+        </div>
+
+        {/* Bio card */}
+        <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 shadow-sm border border-gray-100 dark:border-gray-700 animated-section space-y-4">
+          <h2 className="text-xl md:text-3xl font-bold">
+            Fullstack <span className="text-primary">Developer</span>
+          </h2>
+          <div className="space-y-3 text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p>
+              Proficient in JavaScript, React, Node.js, Express, MongoDB, and PostgreSQL —
+              building scalable software solutions with a collaborative, detail-oriented approach.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
-              Currently pursuing a Bachelor's in Computer Applications (BCA), which is helping me build a strong foundation in computer science,
-              programming, and IT applications.
-            </p>
-            <p className="text-gray-700 dark:text-gray-300">
-              I've completed Schooling (Science + Maths), providing me with a solid foundation in scientific concepts and mathematics principles.
+            <p>
+              Currently pursuing a <strong className="text-gray-800 dark:text-gray-200">BCA</strong> at Mohanlal Sukhadia University,
+              building a strong CS &amp; programming foundation.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <AboutCard
-              icon={<Code className="h-6 w-6 text-primary" />}
-              title="Projects"
-              value="10+"
-            />
-            <AboutCard
-              icon={<Globe className="h-6 w-6 text-primary" />}
-              title="Technologies"
-              value="15+"
-            />
-            <AboutCard
-              icon={<Database className="h-6 w-6 text-primary" />}
-              title="Databases"
-              value="3+"
-            />
+          {/* Quick tags */}
+          <div className="flex flex-wrap gap-2 pt-2">
+            {['React', 'Node.js', 'MongoDB', 'PostgreSQL', 'Docker', 'REST API'].map(tag => (
+              <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-primary/10 text-primary font-medium">
+                {tag}
+              </span>
+            ))}
           </div>
+
+          <a href="#experience" onClick={e => { e.preventDefault(); document.querySelector('#experience')?.scrollIntoView({ behavior: 'smooth' }); }}
+            className="inline-flex items-center gap-1 text-sm font-semibold text-primary mt-2">
+            View Experience <ChevronRight className="h-4 w-4" />
+          </a>
         </div>
+
       </div>
     </section>
   );
