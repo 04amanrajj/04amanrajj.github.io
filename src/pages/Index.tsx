@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Navbar from '@/components/Navbar';
+import BottomNav from '@/components/BottomNav';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ExperienceSection from '@/components/ExperienceSection';
@@ -13,22 +14,6 @@ import CertificatesSection from '@/components/CertificatesSection';
 
 const Index = () => {
   React.useEffect(() => {
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
     // Intersection Observer for scroll animations
     const observer = new IntersectionObserver(
       (entries) => {
@@ -46,10 +31,6 @@ const Index = () => {
     });
 
     return () => {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.removeEventListener('click', function(e) {});
-      });
-      
       document.querySelectorAll('.animated-section').forEach((section) => {
         observer.unobserve(section);
       });
@@ -59,7 +40,8 @@ const Index = () => {
   return (
     <>
       <Navbar />
-      <main>
+      {/* Extra bottom padding on mobile for BottomNav */}
+      <main className="main-with-bottom-nav md:pb-0">
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
@@ -70,6 +52,7 @@ const Index = () => {
       </main>
       <Footer />
       <GoToTop />
+      <BottomNav />
     </>
   );
 };
