@@ -44,24 +44,24 @@ export const ContactSection: React.FC = () => {
         <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-1">Contact</h2>
         <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">Let's connect and build something great</p>
 
-        {/* Quick contact cards — horizontal scroll on mobile */}
-        <div className="flex gap-3 overflow-x-auto hide-scrollbar pb-2 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-3 md:overflow-visible mb-6">
+        {/* Quick contact cards — 3-column grid */}
+        <div className="grid grid-cols-3 gap-3 mb-6">
           {contactLinks.map(({ icon, label, value, href, color }) => (
-            <div key={label} className="flex-shrink-0 w-[75vw] max-w-[240px] md:w-auto md:max-w-none">
+            <div key={label}>
               {href ? (
-                <a href={href} className={`flex items-center gap-3 p-3.5 rounded-2xl ${color} border border-current/10 active:scale-95 transition-transform block`}>
+                <a href={href} className={`flex flex-col items-center text-center gap-2 p-3.5 rounded-2xl ${color} border border-current/10 active:scale-95 transition-transform block h-full`}>
                   <div className="flex-shrink-0">{icon}</div>
                   <div className="min-w-0">
                     <p className="text-[10px] font-semibold uppercase tracking-wider opacity-70">{label}</p>
-                    <p className="text-xs font-medium truncate">{value}</p>
+                    <p className="text-[11px] font-medium break-all leading-tight">{value}</p>
                   </div>
                 </a>
               ) : (
-                <div className={`flex items-center gap-3 p-3.5 rounded-2xl ${color} border border-current/10`}>
+                <div className={`flex flex-col items-center text-center gap-2 p-3.5 rounded-2xl ${color} border border-current/10 h-full`}>
                   <div className="flex-shrink-0">{icon}</div>
                   <div className="min-w-0">
                     <p className="text-[10px] font-semibold uppercase tracking-wider opacity-70">{label}</p>
-                    <p className="text-xs font-medium truncate">{value}</p>
+                    <p className="text-[11px] font-medium break-all leading-tight">{value}</p>
                   </div>
                 </div>
               )}

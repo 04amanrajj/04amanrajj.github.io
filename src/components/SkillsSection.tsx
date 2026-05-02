@@ -78,18 +78,18 @@ export const SkillsSection: React.FC = () => {
                 <ChevronRight className="h-3.5 w-3.5 text-gray-300 dark:text-gray-600 ml-auto" />
               </div>
 
-              {/* Horizontal scroll row */}
-              <div className="flex gap-3 overflow-x-auto hide-scrollbar pb-2 -mx-4 px-4 md:mx-0 md:px-0 md:flex-wrap md:overflow-visible">
+              {/* 4-column grid on mobile, more on larger screens */}
+              <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-2.5">
                 {cat.skills.map((skill, si) => (
                   <a
                     key={si}
                     href={skill.homepage}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-shrink-0 flex flex-col items-center gap-1.5 p-3 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 active:scale-95 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 min-w-[64px]"
+                    className="flex flex-col items-center gap-1.5 p-2.5 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 active:scale-95 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5"
                   >
-                    <div className="flex items-center justify-center h-9 w-9">{skill.icon}</div>
-                    <span className="text-[10px] font-medium text-gray-600 dark:text-gray-400 text-center leading-tight whitespace-nowrap">
+                    <div className="flex items-center justify-center h-8 w-8">{skill.icon}</div>
+                    <span className="text-[9px] font-medium text-gray-600 dark:text-gray-400 text-center leading-tight">
                       {skill.name}
                     </span>
                   </a>
