@@ -163,9 +163,13 @@ export const ProjectsSection: React.FC = () => {
           <div className="flex gap-3 overflow-x-auto scroll-snap-x hide-scrollbar pb-1 -mx-4 px-4">
             {projects.map((p, i) => <ProjectCard key={i} {...p} />)}
           </div>
-          {/* Row 2: projects in reverse ← */}
-          <div className="flex gap-3 overflow-x-auto scroll-snap-x hide-scrollbar pb-1 -mx-4 px-4">
-            {[...projects].reverse().map((p, i) => <ProjectCard key={i} {...p} />)}
+          {/* Row 2: scrolls right-to-left (starts from right) ← */}
+          <div dir="rtl" className="flex gap-3 overflow-x-auto scroll-snap-x hide-scrollbar pb-1 -mx-4 px-4">
+            {projects.map((p, i) => (
+              <div key={i} dir="ltr">
+                <ProjectCard {...p} />
+              </div>
+            ))}
           </div>
         </div>
 
