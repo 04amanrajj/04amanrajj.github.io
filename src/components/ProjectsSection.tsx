@@ -157,9 +157,16 @@ export const ProjectsSection: React.FC = () => {
         <h2 className="text-2xl md:text-4xl font-bold mb-2 text-gray-900 dark:text-white">Projects</h2>
         <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">Swipe to explore →</p>
 
-        {/* Mobile: horizontal snap scroll */}
-        <div className="md:hidden flex gap-4 overflow-x-auto scroll-snap-x hide-scrollbar pb-4 -mx-4 px-4">
-          {projects.map((p, i) => <ProjectCard key={i} {...p} />)}
+        {/* Mobile: two horizontal swipe rows */}
+        <div className="md:hidden space-y-3">
+          {/* Row 1: projects in order → */}
+          <div className="flex gap-3 overflow-x-auto scroll-snap-x hide-scrollbar pb-1 -mx-4 px-4">
+            {projects.map((p, i) => <ProjectCard key={i} {...p} />)}
+          </div>
+          {/* Row 2: projects in reverse ← */}
+          <div className="flex gap-3 overflow-x-auto scroll-snap-x hide-scrollbar pb-1 -mx-4 px-4">
+            {[...projects].reverse().map((p, i) => <ProjectCard key={i} {...p} />)}
+          </div>
         </div>
 
         {/* Desktop: 3-column grid */}
