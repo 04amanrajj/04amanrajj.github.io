@@ -109,11 +109,13 @@ export const HeroSection: React.FC = () => {
       </div>
 
       {/* Scroll hint */}
-      <button onClick={scrollToAbout}
-        className="absolute bottom-24 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-gray-400 dark:text-gray-600 animate-bounce z-10">
-        <span className="text-[10px] uppercase tracking-widest">Scroll</span>
-        <ChevronDown className="h-4 w-4" />
-      </button>
+      <div className="absolute bottom-24 md:bottom-10 left-0 right-0 flex justify-center z-10">
+        <button onClick={scrollToAbout}
+          className="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-600 animate-bounce">
+          <span className="text-[10px] uppercase tracking-widest">Scroll</span>
+          <ChevronDown className="h-4 w-4" />
+        </button>
+      </div>
     </section>
   );
 };
