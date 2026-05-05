@@ -35,13 +35,13 @@ jobs:
         working-directory: desktop-build
         run: |
           npm install
-          npm run build
+          VITE_BASE_URL='/' npm run build
 
       - name: Build mobile site (mobile-redesign)
         working-directory: mobile-build
         run: |
           npm install
-          npm run build
+          VITE_BASE_URL='/mobile/' npm run build
 
       - name: Prepare deploy directory
         run: |
@@ -50,7 +50,7 @@ jobs:
           # Copy desktop build to root
           cp -r desktop-build/dist/* deploy/
           
-          # Create mobile-view subdirectory
+          # Create mobile subdirectory
           mkdir -p deploy/mobile
           cp -r mobile-build/dist/* deploy/mobile/
           
@@ -58,10 +58,10 @@ jobs:
           echo "✅ Mobile site: deploy/mobile/"
 
       - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: deploy
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
