@@ -1,8 +1,8 @@
-name: Deploy Desktop & Mobile Views
+name: Deploy Portfolio Website
 
 on:
   push:
-    branches: [master, mobile-redesign]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -14,58 +14,23 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout master branch (desktop)
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: master
-          path: desktop-build
-
-      - name: Checkout mobile-redesign branch
-        uses: actions/checkout@v4
-        with:
-          ref: mobile-redesign
-          path: mobile-build
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Build desktop site (master)
-        working-directory: desktop-build
+      - name: Install dependencies and build
         run: |
           npm install
-          VITE_BASE_URL='/' npm run build
-          echo "Desktop build complete"
-          ls -la dist/
-
-      - name: Build mobile site (mobile-redesign)
-        working-directory: mobile-build
-        run: |
-          npm install
-          VITE_BASE_URL='/mobile/' npm run build
-          echo "Mobile build complete"
-          ls -la dist/
-
-      - name: Prepare deploy directory
-        run: |
-          mkdir -p deploy/mobile
-          
-          # Copy desktop build to root
-          echo "Copying desktop files..."
-          cp -v -r desktop-build/dist/* deploy/ || echo "Desktop copy failed"
-          
-          # Copy mobile build to mobile subdirectory
-          echo "Copying mobile files..."
-          cp -v -r mobile-build/dist/* deploy/mobile/ || echo "Mobile copy failed"
-          
-          echo "Deploy directory structure:"
-          find deploy -type f | head -20
+          npm run build
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: deploy
+          path: dist
 
       - name: Deploy to GitHub Pages
         id: deployment
