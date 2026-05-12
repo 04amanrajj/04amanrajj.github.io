@@ -59,7 +59,7 @@ const Index = () => {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="main-with-bottom-nav md:pb-0">
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
