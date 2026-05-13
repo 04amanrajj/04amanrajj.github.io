@@ -38,12 +38,6 @@ export const HeroSection: React.FC = () => {
           <span className="absolute bottom-1 right-1 bg-green-500 w-4 h-4 rounded-full border-2 border-white dark:border-gray-950 shadow-md" />
         </div>
 
-        {/* "Open to opportunities" badge */}
-        <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-primary/10 text-primary ring-1 ring-primary/20">
-          <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-          Open to opportunities
-        </span>
-
         {/* Heading */}
         <div>
           <p className="text-xs text-gray-400 dark:text-gray-500 mb-1 tracking-widest uppercase">Hi, I'm</p>
@@ -100,21 +94,21 @@ export const HeroSection: React.FC = () => {
           </Button>
         </div>
 
+        {/* Scroll hint in natural document flow */}
+        <div className="pt-4 flex justify-center z-10">
+          <button onClick={scrollToAbout}
+            className="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-600 animate-bounce">
+            <span className="text-[10px] uppercase tracking-widest">Scroll</span>
+            <ChevronDown className="h-4 w-4" />
+          </button>
+        </div>
+
         {/* Desktop profile image */}
         <div className="hidden md:block mt-4">
           <div className="w-48 h-48 rounded-full ring-4 ring-primary/20 ring-offset-4 overflow-hidden shadow-2xl">
             <img src="/aman.jpg" alt="Aman Raj" className="w-full h-full object-cover object-top scale-110" />
           </div>
         </div>
-      </div>
-
-      {/* Scroll hint */}
-      <div className="absolute bottom-24 md:bottom-10 left-0 right-0 flex justify-center z-10">
-        <button onClick={scrollToAbout}
-          className="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-600 animate-bounce">
-          <span className="text-[10px] uppercase tracking-widest">Scroll</span>
-          <ChevronDown className="h-4 w-4" />
-        </button>
       </div>
     </section>
   );
