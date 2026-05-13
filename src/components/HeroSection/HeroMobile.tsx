@@ -57,7 +57,7 @@ export const HeroSection: React.FC = () => {
 
         {/* Short bio */}
         <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed max-w-xs md:max-w-md">
-          Building scalable web apps with React, Node.js &amp; modern cloud storage. API-first, mobile-ready.
+          I build exceptional software solutions, integrating APIs, databases, and creating user experiences. Proficient in modern design, microservices, and testing <a href="https://github.com/04amanrajj/linux-setup/releases/tag/release" className="text-inherit hover:text-inherit no-underline hover:no-underline font-normal cursor-text">tools</a>.
         </p>
 
         {/* Floating tech pills */}
