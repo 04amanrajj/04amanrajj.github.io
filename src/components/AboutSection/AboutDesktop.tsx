@@ -20,7 +20,7 @@ const AboutCard: React.FC<{
   );
 };
 
-export const AboutSection: React.FC = () => {
+export const AboutDesktop: React.FC = () => {
   return (
     <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 md:px-6">
@@ -71,4 +71,4 @@ export const AboutSection: React.FC = () => {
   );
 };
 
-export default AboutSection;
+export default AboutDesktop;
