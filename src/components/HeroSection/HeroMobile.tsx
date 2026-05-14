@@ -100,21 +100,21 @@ export const HeroSection: React.FC = () => {
           </Button>
         </div>
 
+        {/* Scroll hint in natural flow to prevent overlap */}
+        <div className="pt-6 flex justify-center z-10">
+          <button onClick={scrollToAbout}
+            className="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-600 animate-bounce">
+            <span className="text-[10px] uppercase tracking-widest">Scroll</span>
+            <ChevronDown className="h-4 w-4" />
+          </button>
+        </div>
+
         {/* Desktop profile image */}
         <div className="hidden md:block mt-4">
           <div className="w-48 h-48 rounded-full ring-4 ring-primary/20 ring-offset-4 overflow-hidden shadow-2xl">
             <img src="/aman.jpg" alt="Aman Raj" className="w-full h-full object-cover object-top scale-110" />
           </div>
         </div>
-      </div>
-
-      {/* Scroll hint */}
-      <div className="absolute bottom-24 md:bottom-10 left-0 right-0 flex justify-center z-10">
-        <button onClick={scrollToAbout}
-          className="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-600 animate-bounce">
-          <span className="text-[10px] uppercase tracking-widest">Scroll</span>
-          <ChevronDown className="h-4 w-4" />
-        </button>
       </div>
     </section>
   );
