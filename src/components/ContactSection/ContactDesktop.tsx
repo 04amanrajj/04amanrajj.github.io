@@ -54,19 +54,62 @@ export const ContactSection: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE";
+
+    if (accessKey === "YOUR_ACCESS_KEY_HERE") {
       toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out. Please note, this is a demonstration form, and no email has been sent.",
+        title: "Access Key Required",
+        description: "Please set VITE_WEB3FORMS_ACCESS_KEY in your .env file or replace the placeholder in ContactDesktop.tsx to receive emails.",
+        variant: "destructive",
       });
-      setFormData({ name: '', email: '', subject: '', message: '' });
       setIsSubmitting(false);
-    }, 1500);
+      return;
+    }
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Message sent!",
+          description: "Thanks for reaching out! Your message was delivered successfully.",
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        toast({
+          title: "Submission failed",
+          description: result.message || "An error occurred during submission. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Network error",
+        description: "Unable to connect to the mail server. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
