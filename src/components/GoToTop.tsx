@@ -4,6 +4,7 @@ import { ArrowUp } from 'lucide-react';
 const GoToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isClicked, setIsClicked] = useState(false);
 
   // Monitor scroll behavior for visibility and progress circle
   const handleScroll = () => {
@@ -28,8 +29,13 @@ const GoToTop: React.FC = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
-      // Note: We can also trigger a temporary bounce animation on the arrow when clicked
     });
+
+    // Trigger a temporary bounce animation on the arrow when clicked
+    setIsClicked(true);
+    setTimeout(() => {
+      setIsClicked(false);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -82,7 +88,9 @@ const GoToTop: React.FC = () => {
         </svg>
 
         {/* Dynamic Premium Icon with hover lift */}
-        <ArrowUp className="h-5 w-5 transition-transform duration-300 ease-out group-hover:-translate-y-1 text-primary" />
+        <ArrowUp className={`h-5 w-5 text-primary transition-transform duration-300 ease-out 
+          ${isClicked ? 'animate-bounce' : 'group-hover:-translate-y-1'}`} 
+        />
       </button>
     </>
   );
