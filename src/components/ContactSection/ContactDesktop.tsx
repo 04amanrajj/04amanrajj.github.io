@@ -58,17 +58,7 @@ export const ContactSection: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE";
-
-    if (accessKey === "YOUR_ACCESS_KEY_HERE") {
-      toast({
-        title: "Access Key Required",
-        description: "Please set VITE_WEB3FORMS_ACCESS_KEY in your .env file or replace the placeholder in ContactDesktop.tsx to receive emails.",
-        variant: "destructive",
-      });
-      setIsSubmitting(false);
-      return;
-    }
+    const accessKey = "d6c74c8a-d406-4958-b67d-1306d9317e50";
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
