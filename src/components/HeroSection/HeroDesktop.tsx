@@ -26,7 +26,7 @@ export const HeroSection: React.FC = () => {
               MERN-Stack Developer | API Development | Database Management
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-lg">
-              I build exceptional software solutions, integrating APIs, databases, and creating user experiences. Proficient in modern design, microservices, and testing <a href="https://github.com/04amanrajj/linux-setup/releases/tag/release" className="text-black dark:text-white hover:no-underline underline underline-offset-2">tools</a  >.
+              I build exceptional software solutions, integrating APIs, databases, and creating user experiences. Proficient in modern design, microservices, and testing <a href="https://github.com/04amanrajj/linux-setup/releases/tag/release" className="text-lg text-gray-600 dark:text-gray-400 max-w-lg">tools</a  >.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button asChild>
