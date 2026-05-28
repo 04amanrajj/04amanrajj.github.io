@@ -7,6 +7,57 @@
   <title>Aman Raj</title>
   <meta name="description" content="linked-folio" />
   <meta name="author" content="amanraj" />
+  <script>
+    // Check screen size and show popup for redirection
+    (function() {
+      const MOBILE_BREAKPOINT = 768; // px - screens smaller than this are considered mobile
+      const STORAGE_KEY = 'redirect_preference';
+      
+      function isMobileScreen() {
+        return window.innerWidth < MOBILE_BREAKPOINT;
+      }
+      
+      function getCurrentViewType() {
+        const path = window.location.pathname;
+        if (path.includes('/mobile')) return 'mobile';
+        return 'desktop';
+      }
+      
+      function showRedirectPopup(targetView) {
+        const message = targetView === 'mobile' 
+          ? 'Looks like you are on a mobile device. Would you like to switch to the mobile view?' 
+          : 'Looks like you are on a desktop. Would you like to switch to the desktop view?';
+        
+        const targetUrl = targetView === 'mobile' ? '/mobile/' : '/';
+        
+        const userChoice = confirm(message + '\n\nClick OK to redirect, or Cancel to stay here.');
+        
+        if (userChoice) {
+          // Remember user's choice for this session
+          sessionStorage.setItem(STORAGE_KEY, targetView);
+          window.location.href = targetUrl;
+        } else {
+          // User declined - remember to not show again this session
+          sessionStorage.setItem(STORAGE_KEY, 'declined');
+        }
+      }
+      
+      // Run after a small delay to ensure proper DOM load
+      window.addEventListener('load', function() {
+        const currentView = getCurrentViewType();
+        const userPreference = sessionStorage.getItem(STORAGE_KEY);
+        
+        // Don't show popup if user already made a choice this session
+        if (userPreference) return;
+        
+        if (isMobileScreen() && currentView === 'desktop') {
+          showRedirectPopup('mobile');
+        } else if (!isMobileScreen() && currentView === 'mobile') {
+          showRedirectPopup('desktop');
+        }
+      });
+    })();
+  </script>
 </head>
 
 <body>
