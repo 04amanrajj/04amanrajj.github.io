@@ -1,0 +1,67 @@
+name: Deploy Desktop & Mobile Views
+
+on:
+  push:
+    branches: [master, mobile-redesign]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master branch (desktop)
+        uses: actions/checkout@v3
+        with:
+          ref: master
+          path: desktop-build
+
+      - name: Checkout mobile-redesign branch
+        uses: actions/checkout@v3
+        with:
+          ref: mobile-redesign
+          path: mobile-build
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Build desktop site (master)
+        working-directory: desktop-build
+        run: |
+          npm install
+          npm run build
+
+      - name: Build mobile site (mobile-redesign)
+        working-directory: mobile-build
+        run: |
+          npm install
+          npm run build
+
+      - name: Prepare deploy directory
+        run: |
+          mkdir -p deploy
+          
+          # Copy desktop build to root
+          cp -r desktop-build/dist/* deploy/
+          
+          # Create mobile-view subdirectory
+          mkdir -p deploy/mobile
+          cp -r mobile-build/dist/* deploy/mobile/
+          
+          echo "✅ Desktop site: deploy/"
+          echo "✅ Mobile site: deploy/mobile/"
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: deploy
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
