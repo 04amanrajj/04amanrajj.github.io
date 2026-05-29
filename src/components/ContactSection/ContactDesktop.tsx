@@ -125,7 +125,7 @@ export const ContactSection: React.FC = () => {
             <ContactCard
               icon={<Phone className="h-6 w-6" />}
               title="Phone"
-              details="+91 7665570832"
+              details="+91 7665770832"
               link="tel:+917665770832"
             />
           </a>

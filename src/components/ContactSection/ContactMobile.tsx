@@ -67,7 +67,7 @@ export const ContactSection: React.FC = () => {
 
   const contactLinks = [
     { icon: <Mail className="h-4 w-4" />, label: "Email", value: "04.aman.raj@gmail.com", href: "mailto:04.aman.raj@gmail.com", color: "bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400" },
-    { icon: <Phone className="h-4 w-4" />, label: "Phone", value: "+91 7665570832", href: "tel:+917665770832", color: "bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400" },
+    { icon: <Phone className="h-4 w-4" />, label: "Phone", value: "+91 7665770832", href: "tel:+917665770832", color: "bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400" },
     { icon: <MapPin className="h-4 w-4" />, label: "Location", value: "Rajasthan, India", href: undefined, color: "bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400" },
   ];
 
